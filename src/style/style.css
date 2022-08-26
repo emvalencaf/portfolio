@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    color: var(--lightColor);
+}
+
+:root{
+    --veryDarkColor: #1F596B;
+    --darkColor: #328FAB;
+    --baseColor:#3DAED1;
+    --lightColor: #44C4EB;
+    --lighterColor:#48CEF7;
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: var(--veryDarkColor);
+    
+    height: 100vh;
+    width: 100vw;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    
+    text-transform: uppercase;
+
+    gap: 30px;
+}
+
+.container{
+    display: flex;
+    gap: 10px;
+}
