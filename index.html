@@ -1,83 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu portfólio</title>
-    <link rel="stylesheet" href="src/style/style.css">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body>
     <header>
-        <img src="#" alt="meu logo">
-        <nav>
-            <ul>
-                <li>
-                    <a href="#sobre" ref="internal"><strong>Sobre</strong></a>
+        <img src="#" alt="meu logo" id="logo" class="logo">
+        <button class="toggleThemeMode">
+            <i class="uil uil-moon"></i>
+        </button>
+        <nav class="navbar-container">
+
+            <button id="mobile-menu" class="mobile-menu">
+                <i class="uil uil-bars"></i>
+            </button>
+
+            <ul class="navbar_ul">
+                <li class="navbar_link">
+                    <a href="#home">
+                        <i class="uil uil-estate"></i>
+                        <span>
+                            <strong>home</strong>
+                        </span>
+                    </a>
                 </li>
-                <li>
-                    <a href="#habilidades" ref="internal"><strong>Habilidadess & Conhecimentos</strong></a>
-                </li> 
-                <li>
-                    <a href="#projetos" ref="internal"><strong>Projetos</strong></a>
-                </li> 
-                <li>
-                    <a href="#contato" ref="internal"><strong>Contato</strong></a>
-                </li> 
+                <li class="navbar_link">
+                    <a href="#sobre">
+                        <i class="uil uil-user"></i>
+                        <span>
+                            <strong>sobre</strong>
+                        </span>
+                    </a>
+                </li>
+                <li class="navbar_link">
+                    <a href="#habilidades">
+                        <i class="uil uil-visual-studio"></i>
+                        <span>
+                            <strong>habilidades</strong>
+                        </span>
+                    </a>
+                </li>
+                <li class="navbar_link">
+                    <a href="#projetos">
+                        <i class="uil uil-brackets-curly"></i>
+                        <span>
+                            <strong>projetos</strong>
+                        </span>
+                    </a>
+                </li>
+                <li class="navbar_link">
+                    <a href="#contato">
+                        <i class="uil uil-message"></i>
+                        <span>
+                            <strong>contato</strong>
+                        </span>
+                    </a>
+                </li>
+                <li class="navbar_link">
+                    <a href="#">
+                        <i class="uil uil-file-download-alt"></i>
+                        <span>
+                            <strong>currículo</strong>
+                        </span>
+                    </a>
+                </li>
             </ul>
-        </nav class="navbar">
+        </nav>
     </header>
+    <!--
     <main>
-        <section>
-            <span>
-                olá, seja bem-vindo a página do meu portfólio. 
-            </span>
-            <span>
-                Meu nome é
-            </span>
-            <span>
-                Edson Valença
-            </span>
-            <span>
-                E eu desenvolvo coisas para a web
-            </span>
-            <p>
-                Sou desenvolvedor júnior front-end disposto a encarar os mais diversos desafios para construir coisas incrivéis e úteis. Atualmente, meu foco é polir minha técnicas, melhorar meus conhecimento para vencer meu desafio, seja qual proejto for.
-            </p>
-            <p>
-                Convido o senhor, ou a senhora, ou, se preferir, você, meu caro visitante, a conferir o peso das minhas palavras. Pois, como dizem os italianos, <abbr title="Quem tem língua, vai a Roma"><em>chi lingua ha, a Roma va</em></abbr>.
-            </p>
+        <section id="apresentacao" class="section">
+            <div class="container column">
+                <span>
+                    olá, meu nome é
+                </span>
+                <h1 class="title">
+                    edson Valença
+                </h1>
+                <span>
+                    e eu desenvolvo coisas para a web
+                </span>
+                <span>
+                    seja bem-vindo(a) ao meu portfólio
+                </span>
+            </div>
+            <div class="container column">
+                <p>
+                    sou desenvolvedor júnior front-end disposto a encarar os mais diversos desafios para construir coisas incrivéis e úteis. Atualmente, meu foco é polir minha técnicas, melhorar meus conhecimento para vencer meu desafio, seja qual proejto for.
+                </p>
+                <p>
+                    convido você a conferir o peso das minhas palavras. Pois, como dizem os italianos, <abbr title="Quem tem língua, vai a Roma"><em>chi lingua ha, a Roma va</em></abbr>.
+                </p>
+            </div>
         </section>
-        <section id="sobre">
-            <h2 class="title">sobre mim</h2>
+        <section id="sobre" class="section">
+            <h1 class="title">sobre mim</h2>
             <article class="container">
+                <div class="container column">
+                    <p>
+                        para resumir: sou um graduado em Direito e nessa área trabalhei por alguns anos e, de forma gradual e natural, fui atraído para área no Direito que assiste a inovação e tecnologia no Direito. O que me levou me re-aproximou da área de progamação em razão das <em>law-tech</em>.
+                    </p>
+                    <p>
+                        para o mal ou bem, o tempo livre da pandemia me deu a oportunidade de aprofundar relações um passatempo antigo, do tempo de adolescência, que era desenvolver: programas; à época eram jogos na plataforma <a href="http://www.byond.com/" rel="external">BYOND</a> - uma plataforma com uma línguagem para criação de jogos multiplayers - hoje aplicações web.
+                    </p>
+                    <p>
+                        atualmente, sou um programador front-end júnior em busca do seu primeiro emprego na área de programação. No momento desenvolvo projetos legais em javascript, html e css, que vão desde aplicações a páginas na web que atendem a necessidade e desejos dos clientes que buscam do simples ao legal.
+                    </p>
+                    <p>
+                        saiba um pouco mais sobre as minhas qualificações acessando meu currículo e perfil no linkedin.
+                    </p>
+                    <div class="container">
+                        <button class="btn">currículo</button>
+                        <button>linkedIn</button>
+                    </div>
+                </div>
                 <picture>
                     <img src="#" alt="minha foto">
                 </picture>
-                <div>
-                    <p>
-                        Para resumir: sou um graduado em Direito e nessa área trabalhei por alguns anos e, de forma gradual e natural, fui atraído para área no Direito que assiste a inovação e tecnologia no Direito. O que me levou me re-aproximou da área de progamação em razão das <em>law-tech</em>.
-                    </p>
-                    <p>
-                        Para o mal ou bem, o tempo livre da pandemia me deu a oportunidade de aprofundar relações um passatempo antigo, do tempo de adolescência, que era desenvolver: programas; à época eram jogos na plataforma <a href="http://www.byond.com/" rel="external">BYOND</a> - uma plataforma com uma línguagem para criação de jogos multiplayers - hoje aplicações web.
-                    </p>
-                    <p>
-                        Atualmente, sou um programador front-end júnior em busca do seu primeiro emprego na área de programação. No momento desenvolvo projetos legais em javascript, html e css, que vão desde aplicações a páginas na web que atendem a necessidade e desejos dos clientes que buscam do simples ao legal.
-                    </p>
-                </div>
             </article>
         </section>
-        <section id="habilidades">
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam doloribus cumque temporibus facere, dolorum suscipit qui soluta molestiae blanditiis. Totam tenetur ipsum earum aliquam autem atque fuga nobis ducimus eveniet?
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere maxime, distinctio optio corrupti fugiat ea deserunt. Illum, quia accusamus fuga iure quas consequatur cum, soluta necessitatibus accusantium, natus aliquid ullam.
-            </p>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium ducimus sed repudiandae, rem molestias amet sunt inventore corrupti hic est ab. Suscipit, quos fugit. Voluptatem ratione sequi similique reiciendis deserunt!
-            </p>
+        <section id="habilidades" class="section">
+            <h1 class="title">
+                Habilidades & Conhecimento
+            </h1>
+            <span>nodeJs</span>
+            <i class="fa-brands fa-node"></i>
+            <span>javascript</span>
+            <i class="fa-brands fa-square-js"></i>
+            <span>html</span>
+            <i class="fa-brands fa-html5"></i>
+            <span>css3</span>
+            <i class="fa-brands fa-css3"></i>
         </section>
-        <section id="projetos">
-            <h1>
+        <section id="projetos" class="section">
+            <h1 class="title">
                 projetos
             </h1>
             <p>
@@ -87,20 +150,25 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi consectetur est nostrum! Optio, aperiam inventore reprehenderit vitae magnam error, esse repellat maxime, eos blanditiis ipsa similique! Repellendus consequuntur libero perspiciatis.
             </p>
         </section>
-        <section id="contato">
-            <h1>
-                contato
-            </h1>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis fugit dolorum accusantium nesciunt recusandae, voluptatibus autem consectetur alias fugiat porro provident sint doloremque, velit, sed ducimus eligendi ad maiores sequi!
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et rerum necessitatibus ipsa eos nostrum officia, laborum atque, amet totam exercitationem, vel hic in pariatur voluptates modi iste inventore esse sint.
-            </p>
+        <section id="contato" class="section">
+            <h1 class="title">contato</h2>
+            <p>e, então, vamos desenvolver algo incrível juntos?</p>
+            <form action="" class="container column">
+                <label for="nome">nome</label>
+                <input type="text" id="nome" placeholder="coloque seu nome">
+                <label for="email">e-mail</label>
+                <input type="email" id="email" placeholder="coloque seu e-mail">
+                <label for="assunto">assunto</label>
+                <input type="text" id="assunto" placeholder="coloque o assunto">
+                <textarea id="textArea" cols="30" rows="10"></textarea>
+            </form>
         </section>
     </main>
     <footer>
-        &copy; design e o desenvolvimento foi feito por Edson Mota Valença Filho.
-    </footer>
+        <p>
+            &copy; design e o desenvolvimento foi feito por Edson Mota Valença Filho.
+        </p>
+    </footer>-->
+    <script src="./src/js/index.js" type="module"></script>
 </body>
 </html>
