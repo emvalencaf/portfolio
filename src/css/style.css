@@ -18,6 +18,10 @@ body{
 /* -- header ---*/
 
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+
     font-size: 1.2em;
     display: flex;
     justify-content: space-around;
@@ -26,11 +30,15 @@ header{
     background-color: rgba(0, 0, 0, 0.9);
     
     width: 100%;
-    
+
     padding: 10px 0px;
     
-    position:fixed;
+
     animation: headerLoad var(--header_load_time) ease-in;
+}
+
+.header-hidden{
+    transform: translateY(-100px);
 }
 
 header button{
@@ -181,6 +189,7 @@ main{
     border: 1px solid black;
     margin: 20px auto;
     display:inline-block;
+    
 }
 
 .social_media_link{
@@ -191,15 +200,41 @@ main{
     transform: scale(1.3);
 }
 
-.section.home{
-    margin: 280px 220px;
+/* base das seções*/
+
+
+.section{
+    margin: 0px 220px;
+    height: 500px;
+    padding-top: 80px;
 }
 
-.title{
+.section .title:after{
+    background-color: black;
+    content: "";
+    height: 1px;
+    width: 250px;
+    border: 1px black;
+    margin: auto 20px;
+    transform: translateY(-6px);
+    display: inline-block;
+}
+
+/* seção home*/
+
+.section.home{
+    margin-top: 200px;
+}
+
+.section.home .title{
     font-size: 2em;
 }
 
-.subtitle{
+.section.home .title::after{
+    display: none;
+}
+
+.section.home .subtitle{
     font-size: 1em;
     color:rgba(34, 34, 34, 0.4);
     line-height: 30px;
@@ -209,4 +244,26 @@ main{
 .profissao{
     font-size: 1.25em;
     text-transform: uppercase;
+}
+
+/* seção sobre mim */
+
+.section.sobre .container{
+    display: flex;
+    gap:50px;
+}
+
+.section.sobre .container.col{
+    display:flex;
+    flex-direction: column;
+    gap:0px;
+}
+
+.section.sobre .container.col .text{
+    text-align: justify;
+
+    margin: 5px 0px;
+
+    width:100%;
+    max-width: 550px;
 }

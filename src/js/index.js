@@ -4,6 +4,23 @@
 const mobileMenuBtn = document.querySelector('#mobile-menu')
 const ulNavbar = document.querySelector('.navbar_ul')
 
+//Listerner nos eventos DOM
+
+
+//scroll da página para esconder a barra de navegação
+
+let lastScrollYCoords = window.scrollY
+const header = document.querySelector('header')
+window.addEventListener("scroll", hideNavbar)
+
+function hideNavbar(){
+
+    lastScrollYCoords < window.scrollY? header.classList.add("header-hidden") : header.classList.remove("header-hidden")
+
+    return lastScrollYCoords = window.scrollY
+}
+
+//Botão de toggle para o menu mobile
 
 mobileMenuBtn.addEventListener('click', toggleMobileMennu)
 
