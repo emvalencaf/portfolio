@@ -4,9 +4,9 @@
         position: fixed;
         top:0;
         left:0;
-        
+
         justify-content: space-between;
-        background-color: ghostwhite;   
+        background-color: ghostwhite;
     }
 
     header .logo{
@@ -50,5 +50,36 @@
     .navbar_link:last-child{
         animation-name: navbarLinkLoad;
         transform: scale(0);
+    }
+
+    /* main no mobile*/
+
+    .container.social-media{
+        display:none;
+    }
+
+    .section.home{
+        margin-top: 100px;
+        margin-left: 0px;
+        margin-right: 0px;
+        
+        padding: 0px 20px;
+    }
+
+
+    .title{
+        font-size: 1.5em;
+        width: 100%;
+    }
+    
+    .subtitle{
+        font-size: 0.8em;
+        color:rgba(34, 34, 34, 0.4);
+        width: 100%;
+    }
+    
+    .profissao{
+        font-size: 1em;
+        text-transform: uppercase;
     }
 }
