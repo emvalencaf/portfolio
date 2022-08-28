@@ -132,61 +132,63 @@
             <section id="habilidades" class="section hab">
                 <h1 class="title">Habilidades</h1>
                 <p>
-                    Abaixo as tecnologias que eu uso para desenvolver o front-end e, algumas vezes, o back-end de webpages e webapp:
+                    Abaixo as tecnologias que eu uso para desenvolver o front-end e, algumas vezes, o back-end de webpages e webapp, clique nos ícones abaixo para saber um pouco mais:
                 </p>
-                <div class="container-tech">
+                <div class="container-tech" id="containerTech">
                     <abbr title="javascript">
-                        <button class="btn">
+                        <button class="btn active" id="btnJavascript" data-hab="javascript">
                             <i class="uil uil-java-script"></i>
                         </button>
                     </abbr>
                     <abbr title="html5">
-                        <button class="btn">
+                        <button class="btn" id="btnHTML" data-hab="html">
                             <i class="uil uil-html5"></i>
                         </button>
                     </abbr>
                     <abbr title="css">
-                        <button class="btn">
+                        <button class="btn" id="btnCSS" data-hab="css">
                             <i class="uil uil-css3-simple"></i>
                         </button>
                     </abbr>
                     <abbr title="visual studio code">
-                        <button class="btn">
+                        <button class="btn" id="btnVSCode" data-hab="vscode">
                             <i class="uil uil-visual-studio"></i>
                         </button>
                     </abbr>
                     <abbr title="nodejs">
-                        <button class="btn">
-                            <img src="./src/imgs/nodejs.svg" alt="logo do nodejs">
+                        <button class="btn" id="btnNodejs" data-hab="nodejs">
+                            <img src="#" alt="logo do nodejs">
                         </button>
                     </abbr>
                     <abbr title="git">
-                        <button class="btn">
+                        <button class="btn" id="btnGit" data-hab="git">
                             <i class="uil uil-code-branch"></i>
                         </button>
                     </abbr>
                     <abbr title="photoshop">
-                        <button class="btn">
+                        <button class="btn" id="btnPhotoshop" data-hab="photoshop">
                             <img src="./src/imgs/adobe-photoshop.svg" alt="logo do photoshop" srcset="">
                         </button>
                     </abbr>
-                </div><!---->
-                <div class="container-descricao">
-                    <p class="text">
-                        Uso o javascript para programar o front-end e o back-end (por meio do runtime do nodejs).
-                    </p>
-                    <p class="text">
-                        Meus conhecimentos sobre javascirpt consistem em manipulação da interface gráfica (DOM), iteirar arrays e objetos,classes, requisições assíncronas (AJAX), consumir API's, storage do navegador, manipulação de JSON e as features do ECMAScript2015.
-                    </p>
-                    <p class="text">
-                        Além da javascript, possuo conhecimento básico sobre typescript e sobre ferramentas como webpack e babeljs.
-                    </p>
-                    <div>
-                        <button class="btn">
+                </div>
+                <div class="container-descricao" id="containerTechDesc">
+                    <div id="techDesc_text">
+                        <p class="text">
+                            Uso o javascript para programar o front-end e o back-end (por meio do runtime do nodejs).
+                        </p>
+                        <p class="text">
+                            Meus conhecimentos sobre javascirpt consistem em manipulação da interface gráfica (DOM), iteirar arrays e objetos,classes, requisições assíncronas (AJAX), consumir API's, storage do navegador, manipulação de JSON e as features do ECMAScript2015.
+                        </p>
+                        <p class="text">
+                            Além da javascript, possuo conhecimento básico sobre typescript e sobre ferramentas como webpack e babeljs.
+                        </p>
+                    </div>
+                    <div class="container-descricao-btn">
+                        <a href="https://github.com/emvalencaf?tab=repositories" target="_blank" class="btn" ref="external">
                             veja meus projetos
-                        </button>
-                        <button class="btn">
-                            certificados de javascript
+                        </a>
+                        <button class="btn" id="btnCertificados" data-hab="javascript">
+                            veja meus certificados
                         </button>
                     </div>
                 </div>
