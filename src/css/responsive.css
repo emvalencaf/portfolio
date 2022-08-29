@@ -114,7 +114,11 @@
         max-width: 300px;
     }
     /*seção habilidades no mobile*/
-
+    
+    .container-descricao p{
+        text-align: justify;
+    }
+    
     .section.hab .container-tech{
         display: flex;
         flex-direction: row;
