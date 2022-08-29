@@ -428,7 +428,7 @@ main{
     width: 100%;
 
     height: 600px;
-    max-width: 1000px;
+    max-width: 600px;
 
     background-color: ghostwhite;
 
@@ -449,7 +449,8 @@ main{
 }
 
 .container-certificados.active{
-    display:block;   
+    display:block;
+   
 }
 .container-certificados i{
     color: rgba(0, 0, 0, 0.475);
@@ -457,9 +458,10 @@ main{
 }
 
 #certificados{
-    position: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 0.8em;
-    padding: 40px 5px 5px 20px;
 }
 
 .container-certificados .btn{

@@ -122,5 +122,13 @@
         gap:6px;
     }
 
+    #certificados{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8em;
+        padding: 40px 5px 5px 80px;
+
+    }
 
 }
