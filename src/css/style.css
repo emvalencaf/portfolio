@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+
 
 :root{
 
@@ -7,7 +9,9 @@
 }
 
 body{
-    color: black;
+    font-family: 'Roboto', sans-serif;
+
+    color: hsla(180, 93%, 11%, 0.9);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -25,8 +29,8 @@ header{
     display: flex;
     justify-content: space-around;
     
-    color:rgba(248, 248, 255, 0.4);
-    background-color: rgba(0, 0, 0, 0.9);
+    color:hsla(240, 100%, 99%, 0.4);
+    background-color: hsla(180, 93%, 11%, 0.9);
     
     width: 100%;
 
@@ -166,6 +170,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .container.social-media{
@@ -179,13 +184,22 @@ main{
     left:0;
 }
 
+.container.social-media i{
+    color: hsla(180, 93%, 11%, 0.9);
+    transition: 400ms;
+}
+
+.container.social-media i:hover{
+    color:hsla(180, 29%, 70%, 0.9);
+}
+
 .container.social-media ul:after{
-    background-color: black;
+    background-color:hsla(180, 93%, 11%, 0.9);
 
     content: "";
     width: 1px;
     height: 100px;
-    border: 1px solid black;
+    border: 1px solid hsla(180, 93%, 11%, 0.9);
     margin: 20px auto;
     display:inline-block;
     
@@ -197,6 +211,7 @@ main{
 
 .social_media_link:hover{
     transform: scale(1.3);
+    text-shadow: 0px 0px 8px rgb(114, 160, 95);
 }
 
 /* base das seções*/
@@ -209,11 +224,11 @@ main{
 }
 
 .section .title:after{
-    background-color: black;
+    background-color:hsla(180, 93%, 11%, 0.9);
     content: "";
     height: 1px;
     width: 250px;
-    border: 1px black;
+    border: 1px hsla(180, 93%, 11%, 0.9);
     margin: auto 20px;
     transform: translateY(-6px);
     display: inline-block;
@@ -222,27 +237,41 @@ main{
 /* seção home*/
 
 .section.home{
+    color:hsl(139, 11%, 34%);
     margin-top: 200px;
 }
 
 .section.home .title{
+    color: hsla(180, 93%, 11%, 0.9);
     font-size: 2em;
 }
 
 .section.home .title::after{
     display: none;
 }
-
 .section.home .subtitle{
     font-size: 1em;
-    color:rgba(34, 34, 34, 0.4);
     line-height: 30px;
-    width: 400px;
+}
+.section.home .subtitle{
+    font-size: 1em;
+    line-height: 30px;
 }
 
-.profissao{
+.section.home .subtitle.second{
     font-size: 1.25em;
+    max-width: 350px;
+    margin-bottom: 20px;
+}
+
+.section.home .profissao{
+    color: hsl(141, 43%, 56%);
+    font-size: 1.5em;
     text-transform: uppercase;
+}
+
+.section.home .text{
+    padding-top: 20px;
 }
 
 /* seção sobre mim */
@@ -273,6 +302,13 @@ main{
 }
 
 .section.sobre .btn{
+    font-size: 1em;
+    color:hsla(240, 100%, 99%, 0.808);
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+
     margin: 10px;
     padding: 5px;
     width: 100%;
@@ -282,11 +318,13 @@ main{
     border-radius: 10px;
 
     cursor: pointer;
+    
+    background-color:hsla(180, 93%, 11%, 0.9);
 }
 
 /* seção de habilidades*/
 
-.section.hab{
+.section.hab article{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -347,26 +385,33 @@ main{
 }
 
 .container-descricao-btn{
+
     display: flex;
     gap: 10px;
 }
 
 .container-descricao-btn .btn{
+
+    color: hsla(240, 100%, 99%, 0.808);
+    font-weight: bold;
+
+
     text-align: center;
     text-decoration: none;
-    color:inherit;
+
     width: 100%;
     padding: 5px;
     border: none;
     outline: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: ghostwhite;
+
+    background-color:hsla(180, 93%, 11%, 0.9);
 }
 
 .container-descricao-btn .btn:disabled{
-    color: rgba(0, 0, 0, 0.5);
-    background-color: rgba(248, 248, 255, 0.455);
+    color: hsla(240, 100%, 99%, 0.4);
+    background-color: hsla(180, 93%, 11%, 0.4);
 }
 
 /* parte dos certificados da seção habilidades */
@@ -418,6 +463,7 @@ main{
 }
 
 .container-certificados .btn{
+    
     font-size: 1em;
     background-color: transparent;
     

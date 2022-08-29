@@ -6,7 +6,6 @@
         left:0;
 
         justify-content: space-between;
-        background-color: ghostwhite;
 
         height: 100px;
     }
@@ -90,16 +89,14 @@
 
     .section.home .title{
         font-size: 1.5em;
-        width: 100%;
+
     }
     
     .section.home .subtitle{
         font-size: 0.8em;
-        color:rgba(34, 34, 34, 0.4);
-        width: 100%;
     }
     
-    .profissao{
+    .section.home .subtitle.profissao{
         font-size: 1em;
         text-transform: uppercase;
     }
