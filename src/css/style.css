@@ -493,15 +493,98 @@ main{
 
 /* seção projetos*/
 
-.img-projeto{
-
-    height: 350px;
-    width: 700px;
-
-    opacity: 0.5;
+.container-card-projeto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.img-projeto:hover{
-    opacity: 1;
-    box-shadow: 0px 0px 20px 8px rgba(86, 123, 108, 0.455);
+.container-card-projeto .arrow{
+    font-size: 3em;
+    transition: 400ms;
+
+    cursor: pointer;
+}
+
+.container-card-projeto .arrow:hover{
+    color: hsla(180, 29%, 70%, 0.9);
+    transform: scale(1.4);
+}
+
+.container-card-projeto .arrow:active{
+    color: ghostwhite;
+    transform: scale(1.4);
+}
+
+.container-card-projeto .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 500px;
+
+    margin-top: 50px;
+
+    text-align: justify;
+    
+    background-color: hsla(180, 93%, 11%, 0.40);
+    padding: 15px;
+
+    border-radius: 30px 0px 30px 0px;
+}
+
+.container-card-projeto .card:hover{
+    background-color: hsla(180, 93%, 11%, 0.10);
+}
+
+.container-card-projeto .card .title{
+    font-size: 1.15em;
+}
+
+.container-card-projeto .card .linguas{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 20px 0px;
+
+    border-radius: 10px 0px 10px 0px;
+    padding: 0px 15px;
+    color: hsla(240, 100%, 99%, 0.808);
+    background-color: hsla(180, 93%, 11%, 0.9);
+    border: 1px transparent;
+}
+
+.container-card-projeto .card .topicos span{
+
+    padding: 5px 5px;
+
+    border: 1px solid hsla(180, 93%, 11%, 0.3);
+    border-radius: 5px;
+}
+
+
+.container-card-projeto .card .demo{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 30px;
+
+    margin-top: 10px;
+}
+
+.container-card-projeto .card .demo a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+.container-card-projeto .card .demo i{
+    font-size: 1.5em;
+    color:hsla(180, 93%, 11%, 0.9);
+}
+
+.container-card-projeto .card .demo a:hover{
+    transform: scale(1.4);
 }
