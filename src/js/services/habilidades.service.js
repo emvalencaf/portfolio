@@ -19,6 +19,6 @@ export class HabilidadeService{
         const url = url_hab + "/" + tag
 
         return createFetch(url)
-            .then(response => console.log(response))
+            .then(data => data)
     }
 }

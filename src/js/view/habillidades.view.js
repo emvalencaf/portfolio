@@ -28,8 +28,50 @@ export class HabilidadeView{
     }
 
     renderContainerCert(data){
+        
+        if(data.length === 0) return
 
+        const containerCertificados = document.querySelector("#container-certificados")
+        const certificados = document.querySelector("#certificados")
+        containerCertificados.classList.add("active")
+
+        let html = "<ul>"
+        html += data.map(curso => `
+            <li>
+                <strong>${curso.titulo}</strong> na/o <strong>${curso.instituicao}</strong>
+                <ul>
+                    <li>
+                        Professor: ${curso.professor}
+                    </li>
+                    <li>
+                        Carga-horária: ${curso.cargaHora} h/a
+                    </li>
+                    <li>
+                        Assunto(s): ${curso.tag.map(assunto => `${this.treatString(assunto)}`).join(" | ")}
+                    </li>
+                </ul>
+            </li>
+        `).join(" ")
+
+        html += "</ul>"
+
+        certificados.innerHTML += html
     }
 
+    renderError(){
+        console.log("olá")
+    }
     
+    treatString(string){
+
+        if(string === "html") return string.toUpperCase()
+
+        if(string === "css") return string.toUpperCase()
+
+        return this.toUpperCaseFirstLetter(string)
+    }
+
+    toUpperCaseFirstLetter(string){
+        return string.charAt(0).toUpperCase() + string.slice(1)
+    }
 }

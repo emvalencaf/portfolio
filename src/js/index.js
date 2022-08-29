@@ -13,7 +13,7 @@ const containerTech = document.querySelector("#containerTech")
 const containerDesc = document.querySelector("#containerTechDesc")
 const btnsHab = [...containerTech.querySelectorAll("button")]
 const btnCertf = document.querySelector("#btnCertificados")
-
+const btnCloseCertf = document.querySelector("#container-certificados button")
 
 
 //instanciando classe MVC habilidades
@@ -64,14 +64,34 @@ function toggleMobileMennu(evt){
 btnsHab.forEach(btn => btn.addEventListener("click", showTechDescription))
 
 function showTechDescription(evt){
-    
+
+    btnCertf.disabled = false
     habilidadeController.getTechDescription(evt.currentTarget)
 
 }
 
 btnCertf.addEventListener("click", showTechCertf)
 
+
+
 function showTechCertf(evt){
+    const containerCertificados = document.querySelector("#container-certificados")
+
+    if(containerCertificados.classList.contains("active")) {
+        return closeTechCertf()
+    }
 
     habilidadeController.getTechCertificados(evt.currentTarget.getAttribute("data-hab"))
+}
+
+btnCloseCertf.addEventListener("click", closeTechCertf)
+
+function closeTechCertf(){
+
+    const containerCertificados = document.querySelector("#container-certificados")
+    const certificados = document.querySelector("#certificados")
+
+    certificados.innerHTML = ""
+
+    containerCertificados.classList.remove('active')
 }
