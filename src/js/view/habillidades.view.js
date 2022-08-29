@@ -55,7 +55,7 @@ export class HabilidadeView{
 
         html += "</ul>"
 
-        certificados.innerHTML += html
+        certificados.innerHTML = html
     }
 
     renderError(){

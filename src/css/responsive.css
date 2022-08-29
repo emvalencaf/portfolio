@@ -66,7 +66,7 @@
         margin-bottom: 100px;
         margin-left: 0px;
         margin-right: 0px;
-        padding-top: 80px;
+        padding-top: 100px;
         padding-bottom: 80px;
         padding-left: 20px;
         padding-right: 20px;
@@ -118,7 +118,7 @@
     .container-descricao p{
         text-align: justify;
     }
-    
+
     .section.hab .container-tech{
         display: flex;
         flex-direction: row;
@@ -135,4 +135,65 @@
 
     }
 
+    /* seção projetos*/
+
+    .section.projetos{
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .section.projetos .title{
+        padding-left: 20px;
+    }
+
+    .container-card-projeto .arrow{
+        font-size: 2em;
+        transition: 400ms;
+    
+        cursor: pointer;
+    }
+    
+    
+    .container-card-projeto .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        max-width: 500px;
+
+        margin-top: 50px;
+
+        text-align: justify;
+    
+        background-color: inherit;
+        padding: 5px;
+
+        border-radius: 30px 0px 30px 0px;
+    }
+
+    .container-card-projeto .card:hover{
+        background-color: inherit;
+    }
+
+
+    
+
+    footer{
+        display: flex;
+        flex-direction: column;
+    
+        font-size: 0.8em;
+        text-align: center;
+
+        color:hsla(240, 100%, 99%, 0.4);
+        background-color: hsla(180, 93%, 11%, 0.9);
+    
+        width: 100%;
+
+        padding: 30px 30px;
+
+        gap: 10px;
+    }
 }
