@@ -1,26 +1,55 @@
 //módulos
     //módulos MVC habilidades
+
 import { HabilidadeController } from "./controller/habilidades.controller.js"
 import { HabilidadeService } from "./services/habilidades.service.js"
 import { HabilidadeView } from "./view/habillidades.view.js"
 
+    //módulos MVC projetos
+
+import { ProjetoController } from "./controller/projeto.controller.js"
+import { ProjetoService } from "./services/projeto.service.js"
+import { ProjetoView } from "./view/projeto.view.js"
+
 //Objetos do DOM
     //header > navbar
+
 const mobileMenuBtn = document.querySelector('#mobile-menu')
 const ulNavbar = document.querySelector('.navbar_ul')
+
     //main > section.hab
+
 const containerTech = document.querySelector("#containerTech")
 const containerDesc = document.querySelector("#containerTechDesc")
 const btnsHab = [...containerTech.querySelectorAll("button")]
 const btnCertf = document.querySelector("#btnCertificados")
 const btnCloseCertf = document.querySelector("#container-certificados button")
 
+    //main > section.projetos
 
-//instanciando classe MVC habilidades
+const projetoCard = document.querySelector("#projetoCard")
+const btnPreviousRepo = document.querySelector("#btnPreviousRepo")
+const btnNextRepo = document.querySelector("#btnNextRepo")
 
+
+
+//instanciando classe
+
+    //MVC habilidades
 const habilidadeService = new HabilidadeService()
 const habilidadeView = new HabilidadeView(containerTech, containerDesc)
 const habilidadeController = new HabilidadeController(habilidadeView, habilidadeService)
+    
+    //MVC projetos
+const projetoService = new ProjetoService()
+const projetoView = new ProjetoView(projetoCard)
+const projetoController = new ProjetoController(projetoView, projetoService)
+
+
+
+
+projetoController.getRepositories()
+
 
 //Listerner nos eventos DOM
 
@@ -94,4 +123,17 @@ function closeTechCertf(){
     certificados.innerHTML = ""
 
     containerCertificados.classList.remove('active')
+}
+
+    //Botões Next e Previous para navegar pelos repositórios
+console.log(btnNextRepo)
+console.log(btnPreviousRepo, "olá")
+btnPreviousRepo.addEventListener("click", navigateRepos)
+
+btnNextRepo.addEventListener("click", navigateRepos)
+
+function navigateRepos(evt){
+
+    console.log(evt.currentTarget)
+
 }

@@ -516,6 +516,12 @@ main{
     justify-content: space-between;
 }
 
+.container-card-projeto button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
 .container-card-projeto .arrow{
     font-size: 3em;
     transition: 400ms;
@@ -537,6 +543,13 @@ main{
 
 .section.projetos p{
     margin: 20px 0px;
+}
+
+.section.projetos a{
+    color: inherit;
+    
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .container-card-projeto .card{

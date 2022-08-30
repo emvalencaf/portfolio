@@ -81,7 +81,7 @@
             <ul>
                 <li class="social_media_link">
                     <abbr title="meu github">
-                        <a href="#" target="_blank" ref="external">
+                        <a href="https://github.com/emvalencaf" target="_blank" ref="external">
                             <i class="uil uil-github-alt"></i>
                         </a>
                     </abbr>
@@ -216,11 +216,13 @@
                 <article>
                     <h1 class="title">Projetos</h1>
                     <p>
-                        Veja abaixo os meus projetos vinculados a minha conta no github ou, se preferir, pode conferir diretamente os meus repositórios no <a href="#" target="_blank" rel="external">github</a>.
+                        Veja abaixo os meus projetos vinculados a minha conta no github ou, se preferir, pode conferir diretamente os meus repositórios no <a href="https://github.com/emvalencaf?tab=repositories" target="_blank" rel="external">github</a>.
                     </p>
                     <div class="container-card-projeto">
-                        <div class="arrow"><i class="uil uil-angle-left"></i></div>
-                        <div class="card">
+                        <button class="arrow" id="btnPreviousRepo" data-navigate-repo="previous">
+                            <i class="uil uil-angle-left"></i>
+                        </button>
+                        <div class="card" id="projetoCard">
                             <h2 class="title-projeto">PokéCarDex</h2>
                             <p>
                                 Projeto de um app que cria carta (similar a um super trunfo) de qualquer pokémon especificado pelo usuário (por meio do id ou nome do pokemon).
@@ -244,7 +246,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="arrow"><i class="uil uil-angle-right"></i></div>
+                        <button class="arrow" id="btnNextRepo" data-navigate-repo="next">
+                            <i class="uil uil-angle-right"></i>
+                        </button>
                     </div>
                 </article>
             </section>
