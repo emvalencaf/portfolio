@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/responsive.css">
     <link rel="stylesheet" href="src/css/nojavascript.css">
+    <link rel="stylesheet" href="src/css/error.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body data-nojavascript="true">
@@ -265,14 +266,23 @@
                 <h1 class="title">Contato</h1>
                 <p>E, então, vamos desenvolver projetos úteis e incríveis juntos?</p>
                 <div>
-                    <form action="" method="post" class="form">
-                        <label for="name">Nome</label>
-                        <input type="text" class="input" id="name" placeholder="preencha esse campo com o seu nome">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" class="input" placeholder="preencha esse campo com o seu e-mail">
-                        <label for="">Assunto</label>
-                        <input type="text" class="input" placeholder="preencha esse campo com o assunto">
-                        <textarea name="" id="" cols="30" rows="10" class="input"></textarea>
+                    <form class="form">
+
+                        <label for="name">Nome <abbr title="campo obrigatório"><sup><i class="uil uil-exclamation-circle"></i></sup></abbr></label>
+                        <input type="text" class="input" minlength="3" id="inputName" placeholder="preencha esse campo com o seu nome" data-contato-type="nome" required>
+                        <span class="error" id="error-nome">por favor preencha um nome</span>
+
+                        <label for="email">E-mail <abbr title="campo obrigatório"><sup><i class="uil uil-exclamation-circle"></i></sup></abbr></label>
+                        <input type="email" id="inputEmail" class="input" placeholder="preencha esse campo com o seu e-mail" data-contato-type="email" minlength="3" required>
+                        <span class="error" id="error-email">por favor preencha um e-mail</span>
+
+                        <label for="">Assunto <abbr title="campo obrigatório"><sup><i class="uil uil-exclamation-circle"></i></sup></abbr></label>
+                        <input type="text" class="input" id="inputAssunto" placeholder="preencha esse campo com o assunto" data-contato-type="assunto" minlength="3" required>
+                        <span class="error" id="error-assunto">por favor preencha um assunto</span>
+
+                        <textarea name="" id="textArea" cols="30" rows="10" maxlength="1500" minlength="50" class="input" placeholder="preencha aqui a sua mensagem, por favor limite-se a 15000 caracteres" data-contato-type="mensagem" required></textarea>
+                        <span class="error" id="error-mensagem">por favor, respeite o limite de caracteres</span>
+
                         <button type="submit" class="btn">enviar</button>
                     </form>
                 </div>
@@ -316,7 +326,7 @@
             </article>
         </section>-->
 
-<!--
-    <script src="./src/js/index.js" type="module"></script>-->
+
+    <script src="./src/js/index.js" type="module"></script>
 </body>
 </html>

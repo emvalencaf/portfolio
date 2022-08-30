@@ -11,8 +11,10 @@ import { ProjetoController } from "./controller/projeto.controller.js"
 import { ProjetoService } from "./services/projeto.service.js"
 import { ProjetoView } from "./view/projeto.view.js"
 
-
-
+    //módulo MVC contato
+import { ContatoController } from "./controller/contato.controller.js"
+import { ContatoService } from "./services/contato.services.js"
+import { ContatoView } from "./view/contato.view.js"
 
 
 //Configuração do documento html para funcionar com o javascript
@@ -52,8 +54,10 @@ const projetoCard = document.querySelector("#projetoCard")
 const btnPreviousRepo = document.querySelector("#btnPreviousRepo")
 const btnNextRepo = document.querySelector("#btnNextRepo")
 
-
-
+    //main > section.contato
+const form = document.querySelector(".form")
+const fields = form.querySelectorAll("[data-contato-type]")
+console.log(fields)
 //instanciando classe
 
     //MVC habilidades
@@ -65,6 +69,12 @@ const habilidadeController = new HabilidadeController(habilidadeView, habilidade
 const projetoService = new ProjetoService()
 const projetoView = new ProjetoView(projetoCard)
 const projetoController = new ProjetoController(projetoView, projetoService)
+
+    //MVC contatos
+const contatoService = new ContatoService()
+const contatoView = new ContatoView(form)
+const contatoController = new ContatoController(contatoView, contatoService)
+
 
 
 
@@ -148,15 +158,34 @@ function closeTechCertf(){
 }
 
     //Botões Next e Previous para navegar pelos repositórios
-console.log(btnNextRepo)
-console.log(btnPreviousRepo, "olá")
+
 btnPreviousRepo.addEventListener("click", navigateRepos)
 
 btnNextRepo.addEventListener("click", navigateRepos)
 
 function navigateRepos(evt){
 
-    console.log(evt.currentTarget)
     projetoController.navigateRepository(evt.currentTarget.getAttribute("data-navigate-repo"))
+
+}
+
+    //formulário da seção contato
+
+form.addEventListener("submit", submitForm)
+
+function submitForm(evt){
+
+    evt.preventDefault()
+
+    contatoController.submit(evt.currentTarget)
+
+}
+    //retirando a classe error dos fields do formulário da seção contato
+
+fields.forEach( field => field.addEventListener("focus", outError))
+
+function outError(evt){
+
+    contatoController.outError(evt.currentTarget)
 
 }

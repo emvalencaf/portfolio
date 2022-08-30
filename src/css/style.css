@@ -653,14 +653,25 @@ main{
     max-width: 600px;
 }
 
+.section.contato .form label i{
+    font-size: 1em;
+}
+
 .section.contato .form .input{
     padding: 5px;
 
     border-radius: 5px;
+    border: 2px solid hsla(180, 93%, 11%, 0.9);
     outline: none;
 
     width: 100%;
 }
+
+.section.contato .form .input:focus{
+    border-color:hsla(180, 29%, 70%, 0.9);
+    box-shadow: 0px 0px 8px hsl(102, 25%, 50%);
+}
+
 
 .section.contato .form .btn{
     padding: 5px;
