@@ -8,23 +8,24 @@
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/responsive.css">
+    <link rel="stylesheet" href="src/css/nojavascript.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
-<body>
+<body data-nojavascript="true">
     <header>
         <span class="logo" id="logo">
               emvalenca
         </span>
-        <button class="toggleThemeMode">
+        <button class="toggleThemeMode nojavascript">
             <i class="uil uil-moon"></i>
         </button>
         <nav class="navbar-container">
 
-            <button id="mobile-menu" class="mobile-menu">
+            <button id="mobile-menu" class="mobile-menu nojavascript">
                 <i class="uil uil-bars"></i>
             </button>
 
-            <ul class="navbar_ul">
+            <ul class="navbar_ul nojavascript nojavascript-nav">
                 <li class="navbar_link">
                     <a href="#home">
                         <i class="uil uil-estate"></i>
@@ -114,6 +115,7 @@
                     Seja bem-vindo ao meu portfólio.
                 </p>
             </section>
+
             <section id="sobre" class="section sobre">
                 <article>
                     <h1 class="title">Sobre mim</h1>
@@ -140,11 +142,11 @@
                 <article>
                     <h1 class="title">Habilidades</h1>
                     <p>
-                        Abaixo as tecnologias que eu uso para desenvolver o front-end e, algumas vezes, o back-end de webpages e webapp, clique nos ícones abaixo para saber um pouco mais:
+                        Abaixo as tecnologias que eu uso para desenvolver o front-end e, algumas vezes, o back-end de webpages e webapp,<span class="nojavascript"> clique nos ícones abaixo para saber um pouco mais:</span><span class="nojavascript substituto-span"> são elas: javascript, html, css, visual studio code (como editor de código), nodejs (para o back-end), git e o photoshop.</span>
                     </p>
                     <div class="container-tech" id="containerTech">
                         <abbr title="javascript">
-                            <button class="btn active" id="btnJavascript" data-hab="javascript">
+                            <button class="btn active nojavascript" id="btnJavascript" data-hab="javascript">
                                 <i class="uil uil-java-script"></i>
                             </button>
                         </abbr>
@@ -179,7 +181,7 @@
                             </button>
                         </abbr>
                     </div>
-                    <div class="container-descricao" id="containerTechDesc">
+                    <div class="container-descricao nojavascript" id="containerTechDesc">
                         <div id="techDesc_text">
                             <p class="text">
                                 Uso o javascript para programar o front-end e o back-end (por meio do runtime do nodejs).
@@ -191,7 +193,7 @@
                                 Além da javascript, possuo conhecimento básico sobre typescript e sobre ferramentas como webpack e babeljs.
                             </p>
                         </div>
-                        <div class="container-descricao-btn">
+                        <div class="container-descricao-btn nojavascript">
                             <a href="https://github.com/emvalencaf?tab=repositories" target="_blank" class="btn" ref="external">
                                 veja meus projetos
                             </a>
@@ -216,17 +218,17 @@
                 <article>
                     <h1 class="title">Projetos</h1>
                     <p>
-                        Veja abaixo os meus projetos vinculados a minha conta no github ou, se preferir, pode conferir diretamente os meus repositórios no <a href="https://github.com/emvalencaf?tab=repositories" target="_blank" rel="external">github</a>.
+                        Veja abaixo <span class="nojavascript substituto-span">um d</span>os meus projetos vinculados a minha conta no github ou, se preferir, pode conferir diretamente os meus repositórios no <a href="https://github.com/emvalencaf?tab=repositories" target="_blank" rel="external">github</a>.
                     </p>
                     <div class="container-card-projeto">
-                        <button class="arrow" id="btnPreviousRepo" data-navigate-repo="previous">
+                        <button class="arrow nojavascript" id="btnPreviousRepo" data-navigate-repo="previous">
                             <i class="uil uil-angle-left"></i>
                         </button>
                         <div class="card" id="projetoCard">
-                            <h2 class="title-projeto">PokéCarDex</h2>
+                            <h2 class="title-projeto">weatherapp</h2>
                             <div class="description">
                                 <p>
-                                    Projeto de um app que cria carta (similar a um super trunfo) de qualquer pokémon especificado pelo usuário (por meio do id ou nome do pokemon).
+                                    Esse app renderiza um card a partir do consumo da Weather API da OpenWeather.  No card são renderizado os dados do clima de uma cidade ou estado.
                                 </p>
                             </div>
                             <div class="linguas">
@@ -240,15 +242,15 @@
                                 <span>Ajax request</span>
                             </div>
                             <div class="demo">
-                                <a href="#">
+                                <a href="https://github.com/emvalencaf/weatherapp" target="_target" rel="external">
                                     <i class="uil uil-github"></i>
                                 </a>
-                                <a href="#">
+                                <a href="https://emvalencaf-weatherapp.herokuapp.com/" target="_blank" rel="external">
                                     <i class="uil uil-external-link-alt"></i>
                                 </a>
                             </div>
                         </div>
-                        <button class="arrow" id="btnNextRepo" data-navigate-repo="next">
+                        <button class="arrow nojavascript" id="btnNextRepo" data-navigate-repo="next">
                             <i class="uil uil-angle-right"></i>
                         </button>
                     </div>
@@ -265,7 +267,7 @@
             &copy; desenvolvido em 2022 por Edson Mota Valença Filho
         </p>
         <p>
-            Meu portfólio encontra-se na versão 1.0 clique neste parágrafo para ver o repositório deste projeto
+            <a href="https://github.com/emvalencaf/portfolio" target="_blank" rel="external">Meu portfólio encontra-se na versão 1.0 clique neste parágrafo para ver o repositório deste projeto</a>
         </p>
     </footer>
     <!--

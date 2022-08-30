@@ -117,7 +117,7 @@ header button{
 
 .navbar_link a:hover{
     color: ghostwhite;
-    scale: 1.1;
+    transform: scale(1.1);
 }
 
 /*animação do primeiro e do último filho do navbar_link*/
@@ -654,4 +654,15 @@ footer{
     padding: 30px 30px;
 
     gap: 10px;
+}
+
+footer a{
+    text-decoration: none;
+    color: inherit;
+    transition: 100ms ease-in;
+}
+
+footer a:hover{
+    color: ghostwhite;
+    transform: scale(1.2);
 }

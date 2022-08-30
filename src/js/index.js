@@ -11,6 +11,27 @@ import { ProjetoController } from "./controller/projeto.controller.js"
 import { ProjetoService } from "./services/projeto.service.js"
 import { ProjetoView } from "./view/projeto.view.js"
 
+
+
+
+
+//Configuração do documento html para funcionar com o javascript
+
+if(document.body.getAttribute("data-noJavascript")){
+
+    document.body.removeAttribute("data-noJavascript")
+
+    document.querySelectorAll(".nojavascript").forEach(element=>{
+
+        if(element.classList.contains("nojavascript")){
+            element.classList.remove("nojavascript")
+        }
+
+        if(element.classList.contains("substituto-span")) element.remove() 
+    })
+}
+
+
 //Objetos do DOM
     //header > navbar
 
@@ -47,8 +68,9 @@ const projetoController = new ProjetoController(projetoView, projetoService)
 
 
 
-
+    //carregar os repositórios na memória
 projetoController.getRepositories()
+
 
 
 //Listerner nos eventos DOM

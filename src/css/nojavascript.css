@@ -1,0 +1,43 @@
+
+
+.nojavascript{
+    display: none;
+}
+
+.nojavascript.substituto-span{
+    display: inline;
+}
+
+
+.navbar_ul.nojavascript.nojavascript-nav{
+    display:flex;
+    justify-content: center;
+    gap:30px;
+}
+
+/* seção hab sem javascript*/
+
+.btn.active.nojavascript{
+    transform: scale(1);
+    text-shadow: none;
+}
+
+.btn.active.nojavascript:hover{
+    transform: scale(1.2);
+    text-shadow: 0px 0px 8px rgb(114, 160, 95);
+}
+
+
+/* responsive */
+
+@media (max-width:770px){
+        
+    .mobile-menu{
+        display: none;
+    }
+
+    .navbar_ul.nojavascript.nojavascript-nav{
+        display:grid;
+        gap: 0;
+    }
+}
