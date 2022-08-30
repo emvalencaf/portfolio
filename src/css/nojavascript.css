@@ -28,6 +28,16 @@
 }
 
 
+/* seção portfolio sem javascript */
+
+.container-card-projeto.nojavascript{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 /* responsive */
 
 @media (max-width:770px){

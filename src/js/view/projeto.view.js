@@ -22,12 +22,16 @@ export class ProjetoView{
                 ${data.topics.map(topic => `<span>${topic}</span>`).join(" ")}
             </div>
             <div class="demo">
-                <a href="${data.html_url}" rel="external">
-                    <i class="uil uil-github"></i>
-                </a>
-                <a href="${data.homepage}" rel="external">
-                    <i class="uil uil-external-link-alt"></i>
-                </a>
+                <abbr title="clique aqui para acessar a página do repositório do projeto">
+                    <a href="${data.html_url}" rel="external">
+                        <i class="uil uil-github"></i>
+                    </a>
+                </abbr>
+                <abbr title="clique aqui para acessar a homepage do projeto">
+                    <a href="${data.homepage}" rel="external">
+                        <i class="uil uil-external-link-alt"></i>
+                    </a>
+                </abbr>
             </div>
             `
 

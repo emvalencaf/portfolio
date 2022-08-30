@@ -220,7 +220,7 @@
                     <p>
                         Veja abaixo <span class="nojavascript substituto-span">um d</span>os meus projetos vinculados a minha conta no github ou, se preferir, pode conferir diretamente os meus repositórios no <a href="https://github.com/emvalencaf?tab=repositories" target="_blank" rel="external">github</a>.
                     </p>
-                    <div class="container-card-projeto">
+                    <div class="container-card-projeto nojavascript">
                         <button class="arrow nojavascript" id="btnPreviousRepo" data-navigate-repo="previous">
                             <i class="uil uil-angle-left"></i>
                         </button>
@@ -242,12 +242,16 @@
                                 <span>Ajax request</span>
                             </div>
                             <div class="demo">
-                                <a href="https://github.com/emvalencaf/weatherapp" target="_target" rel="external">
-                                    <i class="uil uil-github"></i>
-                                </a>
-                                <a href="https://emvalencaf-weatherapp.herokuapp.com/" target="_blank" rel="external">
-                                    <i class="uil uil-external-link-alt"></i>
-                                </a>
+                                <abbr title="clique aqui para acessar a página do repositório do projeto">
+                                    <a href="https://github.com/emvalencaf/weatherapp" target="_target" rel="external">
+                                        <i class="uil uil-github"></i>
+                                    </a>
+                                </abbr>
+                                <abbr title="clique aqui para acessar a homepage do projeto">
+                                    <a href="https://emvalencaf-weatherapp.herokuapp.com/" target="_blank" rel="external">
+                                        <i class="uil uil-external-link-alt"></i>
+                                    </a>
+                                </abbr>
                             </div>
                         </div>
                         <button class="arrow nojavascript" id="btnNextRepo" data-navigate-repo="next">
@@ -259,6 +263,19 @@
 
             <section id="contato" class="section contato">
                 <h1 class="title">Contato</h1>
+                <p>E, então, vamos desenvolver projetos úteis e incríveis juntos?</p>
+                <div>
+                    <form action="" method="post" class="form">
+                        <label for="name">Nome</label>
+                        <input type="text" class="input" id="name" placeholder="preencha esse campo com o seu nome">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" class="input" placeholder="preencha esse campo com o seu e-mail">
+                        <label for="">Assunto</label>
+                        <input type="text" class="input" placeholder="preencha esse campo com o assunto">
+                        <textarea name="" id="" cols="30" rows="10" class="input"></textarea>
+                        <button type="submit" class="btn">enviar</button>
+                    </form>
+                </div>
             </section>
         </div>
     </main>
@@ -299,7 +316,7 @@
             </article>
         </section>-->
 
-
-    <script src="./src/js/index.js" type="module"></script>
+<!--
+    <script src="./src/js/index.js" type="module"></script>-->
 </body>
 </html>

@@ -637,6 +637,43 @@ main{
     transform: scale(1.4);
 }
 
+/* seção de contato */
+.section.contato div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section.contato .form{
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    width: 100%;
+    max-width: 600px;
+}
+
+.section.contato .form .input{
+    padding: 5px;
+
+    border-radius: 5px;
+    outline: none;
+
+    width: 100%;
+}
+
+.section.contato .form .btn{
+    padding: 5px;
+
+    border-radius: 5px;
+
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+}
+
+
 /*footer */
 
 footer{
