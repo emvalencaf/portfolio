@@ -19,7 +19,18 @@ export class ProjetoService{
             this.projetos.push(new ProjetoModel(name, html_url, description, topics, languages_url, homepage))
         })
 
+        this.service_indice = 0
+
         return this.projetos
+    }
+
+    async getLanguage(indice){
+
+        this.projetos[indice].languages = await createFetch(this.projetos[indice].languages_url).then(languages => languages)
+
+
+        return this.projetos[indice]
+
     }
 
     getRepositoryIndex(navigate){

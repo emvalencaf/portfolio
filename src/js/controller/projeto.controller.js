@@ -8,11 +8,11 @@ export class ProjetoController{
 
         try{
             
-            const data = await this.service.getRepositories()
-            this.service.
-            console.log(data)
+            await this.service.getRepositories()
+            const data = await this.service.getLanguage(this.service.projeto_indice)
 
-            //this.view.renderRepository(data, this.service.projeto_indice)
+            console.log(data)
+            this.view.renderRepository(data)
 
         }catch(e){
 
@@ -22,11 +22,13 @@ export class ProjetoController{
 
     }
 
-    navigateRepository(navigate){
+    async navigateRepository(navigate){
         
-        const indice = this.service.getRepositoryIndex(navigate) - 1
+        const indice = this.service.getRepositoryIndex(navigate)
 
-        const repository = this.service.pojetos[indice]
+        const repository = await this.service.getLanguage(indice)
+        
+        console.log(repository)
 
         this.view.renderRepository(repository)
     }

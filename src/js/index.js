@@ -135,5 +135,6 @@ btnNextRepo.addEventListener("click", navigateRepos)
 function navigateRepos(evt){
 
     console.log(evt.currentTarget)
+    projetoController.navigateRepository(evt.currentTarget.getAttribute("data-navigate-repo"))
 
 }

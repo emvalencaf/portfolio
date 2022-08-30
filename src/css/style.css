@@ -579,6 +579,10 @@ main{
     background-color: hsla(180, 93%, 11%, 0.10);
 }
 
+.container-card-projeto .description{
+    height: 200px;
+}
+
 .container-card-projeto .card .linguas{
     display: flex;
     width: 100%;

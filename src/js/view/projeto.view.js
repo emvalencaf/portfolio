@@ -6,58 +6,58 @@ export class ProjetoView{
         this.card = card
     }
 
-    renderRepository(data, indice){
+    renderRepository(data){
 
-        let html = ''
-
-        if(data instanceof ProjetoModel){
-
-            html = `
+        const html =`
             <h2 class="title-projeto">${data.name}</h2>
-            <p>
-                ${data.description}
-            </p>
-            <div> class="linguas">
-                ${Object.keys(data.languages).map(language => `<span>${language}</span>`)}
+            <div class="description">
+                <p>
+                    ${data.description}
+                </p>
+            </div>
+            <div class="linguas">
+                ${Object.keys(data.languages).map(language => `<span>${language}</span>`).join(" ")}
             </div>
             <div class="topicos">
-                ${data.topics.map(topic => `<span>${topic}</span>`)}
+                ${data.topics.map(topic => `<span>${topic}</span>`).join(" ")}
             </div>
             <div class="demo">
                 <a href="${data.html_url}" rel="external">
                     <i class="uil uil-github"></i>
                 </a>
-                <a href="${data.home}" rel="external">
+                <a href="${data.homepage}" rel="external">
                     <i class="uil uil-external-link-alt"></i>
                 </a>
             </div>
             `
 
-            return this.card.innerHTML = html
-
-        }
-
-        html = `
-        <h2 class="title-projeto">${data[indice].name}</h2>
-        <p>
-            ${data[indice].description}
-        </p>
-        <div> class="linguas">
-            ${Object.keys(data[indice].languages).map(language => `<span>${language}</span>`)}
-        </div>
-        <div class="topicos">
-            ${data[indice].topics.map(topic => `<span>${topic}</span>`)}
-        </div>
-        <div class="demo">
-            <a href="${data[indice].html_url}" rel="external">
-                <i class="uil uil-github"></i>
-            </a>
-            <a href="${data[indice].home}" rel="external">
-                <i class="uil uil-external-link-alt"></i>
-            </a>
-        </div>
-        `
-
         return this.card.innerHTML = html
     }
 }
+
+/*
+
+                            <h2 class="title-projeto">PokéCarDex</h2>
+                            <p>
+                                Projeto de um app que cria carta (similar a um super trunfo) de qualquer pokémon especificado pelo usuário (por meio do id ou nome do pokemon).
+                            </p>
+                            <div class="linguas">
+                                <span>Javascript</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+                            <div class="topicos">
+                                <span>API</span>
+                                <span>MVC</span>
+                                <span>Ajax request</span>
+                            </div>
+                            <div class="demo">
+                                <a href="#">
+                                    <i class="uil uil-github"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="uil uil-external-link-alt"></i>
+                                </a>
+                            </div>
+
+*/
