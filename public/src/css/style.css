@@ -235,8 +235,9 @@ main{
 
 .section{
     margin: 0px 220px;
-    height: 500px;
+/*    height: 500px;*/
     padding-top: 80px;
+    margin-bottom: 20px;
 }
 
 .section .title:after{
@@ -248,6 +249,12 @@ main{
     margin: auto 20px;
     transform: translateY(-6px);
     display: inline-block;
+}
+
+.section article{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 /* seção home*/
@@ -294,6 +301,8 @@ main{
 
 .section.sobre .container{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap:50px;
 }
 
@@ -312,9 +321,16 @@ main{
     max-width: 550px;
 }
 
-.section.sobre img{
+
+.section.sobre picture img{
+
     width: 250px;
     height: 250px;
+
+    border-radius: 20px;
+
+
+    box-shadow: 20px 14px 3px 4px hsl(180deg 93% 11% / 30%);
 }
 
 .section.sobre .btn{
@@ -325,7 +341,7 @@ main{
     text-transform: uppercase;
 
 
-    margin: 10px;
+    margin: 30px 0px;
     padding: 5px;
     width: 100%;
 
@@ -336,6 +352,11 @@ main{
     cursor: pointer;
     
     background-color:hsla(180, 93%, 11%, 0.9);
+}
+
+.section.sobre .btn:hover{
+    
+    color:hsla(240, 100%, 99%, 1);
 }
 
 /* seção de habilidades*/
@@ -449,7 +470,7 @@ main{
     background-color: ghostwhite;
 
     border-radius: 20px;
-    animation: container-certificado-load 560ms ease-in;
+    animation: container-certificado-load 360ms ease-in;
     transform: scale(0);
     animation-fill-mode: forwards;
 }
@@ -566,17 +587,12 @@ main{
 
     text-align: justify;
     
-    background-color: hsla(180, 93%, 11%, 0.20);
     padding: 15px;
 
     border-radius: 30px 0px 30px 0px;
 
     border-top: 3px solid hsla(180, 93%, 11%, 0.9);
     border-bottom: 3px solid hsla(180, 93%, 11%, 0.9);
-}
-
-.container-card-projeto .card:hover{
-    background-color: hsla(180, 93%, 11%, 0.10);
 }
 
 .container-card-projeto .description{
@@ -658,6 +674,8 @@ main{
 
     width: 100%;
     max-width: 600px;
+
+    margin-top: 20px;
 }
 
 .section.contato .form label i{
@@ -680,7 +698,19 @@ main{
 }
 
 
+textarea.input{
+    margin-top: 20px;
+    resize: none;
+    height: 250px;
+}
+
 .section.contato .form .btn{
+    color: hsla(240, 100%, 99%, 0.808);
+
+    font-weight: bold;
+    
+    margin: 20px 0px;
+
     padding: 5px;
 
     border-radius: 5px;
@@ -689,8 +719,14 @@ main{
     outline: none;
 
     cursor: pointer;
+
+    background-color:hsla(180, 93%, 11%, 0.9);
+    transition: 360ms ease-in;
 }
 
+.section.contato .form .btn:hover{
+    color:  hsla(240, 100%, 99%, 1);
+}
 
 /*footer */
 

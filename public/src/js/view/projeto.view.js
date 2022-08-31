@@ -23,12 +23,12 @@ export class ProjetoView{
             </div>
             <div class="demo">
                 <abbr title="clique aqui para acessar a página do repositório do projeto">
-                    <a href="${data.html_url}" rel="external">
+                    <a href="${data.html_url}" target="_blank" rel="external">
                         <i class="uil uil-github"></i>
                     </a>
                 </abbr>
                 <abbr title="clique aqui para acessar a homepage do projeto">
-                    <a href="${data.homepage}" rel="external">
+                    <a href="${data.homepage}" target="_blank" rel="external">
                         <i class="uil uil-external-link-alt"></i>
                     </a>
                 </abbr>

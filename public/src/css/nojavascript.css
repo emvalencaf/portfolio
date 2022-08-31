@@ -42,7 +42,7 @@
 
 @media (max-width:770px){
         
-    .mobile-menu{
+    .mobile-menu.nojavascript{
         display: none;
     }
 
