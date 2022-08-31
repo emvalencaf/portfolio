@@ -12,7 +12,7 @@ export class ContatoService{
             
             const regex = /\w+@.+/i
 
-            if(!inputEmail.value && regex.test(inputEmail.value)) throw new Error(`por favor preencha um ${typeDomObject} válido`)
+            if(!regex.test(inputEmail.value)) throw new Error(`por favor preencha um ${typeDomObject} válido`)
 
         }
 
