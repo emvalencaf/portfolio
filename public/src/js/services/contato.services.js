@@ -1,3 +1,5 @@
+import { createFetch } from "../createFetch.js"
+
 export class ContatoService{
 
     validation(value, typeDomObject, minlength){
@@ -10,7 +12,7 @@ export class ContatoService{
 
         if(typeDomObject === "email"){
             
-            const regex = /\w+@.+/i
+            const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 
             if(!regex.test(inputEmail.value)) throw new Error(`por favor preencha um ${typeDomObject} válido`)
 
@@ -18,5 +20,16 @@ export class ContatoService{
 
     }
 
+    sendEmail(formData, sucess, failure){
+        console.log(formData)
 
+        createFetch('/', "POST", JSON.stringify(formData))
+            .then(response => {
+                console.log(response)
+                sucess()})
+            .catch(err => {
+                console.log(err)
+                failure()
+            })
+    }
 }

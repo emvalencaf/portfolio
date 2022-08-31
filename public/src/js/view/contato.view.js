@@ -5,7 +5,17 @@ export class ContatoView{
     }
 
     renderSucess(){
-        
+
+        const html = `<p class="text"><i class="uil uil-check-circle"></i> Sua mensagem foi enviada com sucesso! <i class="uil uil-fast-mail"></i></p> <p class="text"> Obrigado por entrar em contato, em breve retornarei o contato com a minha resposta!</p>`
+
+        this.container.innerHTML = html
+    }
+
+    renderFailure(){
+
+        const  html = `<p class="text"><i class="uil uil-comment-alt-exclamation"></i> Infelizmente não foi possível enviar a sua mensagem.</p><p class="text">Entretanto, você pode entrar em contato comigo diretamente pelo linkedin ou pelos outros contatos em minhas redes sociais.</p>`
+
+        this.container.innerHTML = html
     }
 
     renderError(msg, attribute){

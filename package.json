@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Esse projeto é a primeira versão do meu portfólio.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "dev":"nodemon -r dotenv/config server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emvalencaf/portfolio.git"
+  },
+  "keywords": [],
+  "author": "Edson Mota Valença Filho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emvalencaf/portfolio/issues"
+  },
+  "homepage": "https://github.com/emvalencaf/portfolio#readme",
+  "devDependencies": {
+    "dotenv": "^16.0.2",
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "googleapis": "^107.0.0",
+    "nodemailer": "^6.7.8"
+  }
+}
