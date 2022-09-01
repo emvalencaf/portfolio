@@ -98,6 +98,7 @@ function greetingMessage(){
     return saudacao.textContent = 'boa noite'
 }
 
+greetingMessage()
 
 //Listerner nos eventos DOM
 
