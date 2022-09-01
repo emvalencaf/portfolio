@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
 
-
 :root{
 
     /*variáveis de animação*/
@@ -61,6 +60,36 @@ header button{
 .logo{
     text-transform: uppercase;
     align-self: center;
+}
+
+
+.logo i{
+    font-size: 2em;
+    color: hsla(240, 100%, 99%, 0.6);
+}
+
+.logo span{
+    vertical-align: super;
+}
+
+.logo:hover span{
+    background-image: linear-gradient(to right, hsla(240, 100%, 99%, 0.6), rgb(114, 160, 95));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: logo 200ms linear infinite;
+}
+
+.logo:hover i{
+    color: hsla(240, 100%, 99%, 1);
+    text-shadow: 0px 0px 8px rgb(114, 160, 95);
+}
+
+/* annimação do logo*/
+
+@keyframes logo{
+    to{
+        background-position: 200% center;
+    }
 }
 
 
