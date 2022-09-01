@@ -40,6 +40,9 @@ if(document.body.getAttribute("data-noJavascript")){
 const mobileMenuBtn = document.querySelector('#mobile-menu')
 const ulNavbar = document.querySelector('.navbar_ul')
 
+    //main > section.home
+const saudacao = document.querySelector("#saudacao")
+
     //main > section.hab
 
 const containerTech = document.querySelector("#containerTech")
@@ -81,6 +84,19 @@ const contatoController = new ContatoController(contatoView, contatoService)
     //carregar os repositórios na memória
 projetoController.getRepositories()
 
+    //carregar mensagem de saudação
+
+function greetingMessage(){
+    let h = new Date().getHours()
+
+    if(h <= 5) return saudacao.textContent = 'boa madrugada'
+
+    if(h < 12) return saudacao.textContent = 'bom dia'
+
+    if(h < 18) return saudacao.textContent = 'boa tarde'
+
+    return saudacao.textContent = 'boa noite'
+}
 
 
 //Listerner nos eventos DOM
