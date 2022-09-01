@@ -6,18 +6,29 @@
     --header_load_time: 560ms;
     --navbarLink_load_time: 450ms;
     --logo_load_time: calc(var(--header_load_time) + var(--navbarLink_load_time));
+
+    --textColor: hsla(180, 93%, 11%, 0.9);
+    --backgroundColorBody: white;
+    --headerBackgroundColor: var(--textColor);
+    --textHeaderColor: hsla(240, 100%, 99%, 0.4);
+
+    --secondBackgroundColorBody: ghostwhite;
+    
+    --textHomeColor: hsl(139, 11%, 34%);
+    --titleHomeColor: var(--textColor);
+    --titleProfissao: hsl(141, 43%, 56%);
 }
 
 body{
     font-family: 'Roboto', sans-serif;
 
-    color: hsla(180, 93%, 11%, 0.9);
+    color: var(--textColor);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
 
-    background-color: white;
+    background-color: var(--backgroundColorBody);
 }
 
 /* -- header ---*/
@@ -31,8 +42,8 @@ header{
     display: flex;
     justify-content: space-around;
     
-    color:hsla(240, 100%, 99%, 0.4);
-    background-color: hsla(180, 93%, 11%, 0.9);
+    color:var(--textHeaderColor);
+    background-color: var(--headerBackgroundColor);
     
     width: 100%;
 
@@ -232,7 +243,7 @@ main{
 }
 
 .container.social-media i{
-    color: hsla(180, 93%, 11%, 0.9);
+    color: var(--textColor);
     transition: 400ms;
 }
 
@@ -241,12 +252,12 @@ main{
 }
 
 .container.social-media ul:after{
-    background-color:hsla(180, 93%, 11%, 0.9);
+    background-color:var(--textColor);
 
     content: "";
     width: 1px;
     height: 100px;
-    border: 1px solid hsla(180, 93%, 11%, 0.9);
+    border: 1px solid var(--textColor);
     margin: 20px auto;
     display:inline-block;
     
@@ -279,11 +290,11 @@ main{
 }
 
 .section .title:after{
-    background-color:hsla(180, 93%, 11%, 0.9);
+    background-color:var(--textColor);
     content: "";
     height: 1px;
     width: 250px;
-    border: 1px hsla(180, 93%, 11%, 0.9);
+    border: 1px var(--textColor);
     margin: auto 20px;
     transform: translateY(-6px);
     display: inline-block;
@@ -298,12 +309,12 @@ main{
 /* seção home*/
 
 .section.home{
-    color:hsl(139, 11%, 34%);
+    color: var(--textHomeColor);
     margin-top: 200px;
 }
 
 .section.home .title{
-    color: hsla(180, 93%, 11%, 0.9);
+    color: var(--titleHomeColor);
     font-size: 2em;
 }
 
@@ -326,7 +337,7 @@ main{
 }
 
 .section.home .profissao{
-    color: hsl(141, 43%, 56%);
+    color: var(--titleProfissao);
     font-size: 1.5em;
     text-transform: uppercase;
 }
@@ -368,7 +379,7 @@ main{
     border-radius: 20px;
 
 
-    box-shadow: 20px 14px 3px 4px hsl(180deg 93% 11% / 30%);
+    box-shadow: 20px 14px 20px 4px var(--textColor);
 }
 
 .section.sobre .btn{
@@ -411,6 +422,7 @@ main{
 }
 .section.hab i{
     font-size: 3em;
+    color: var(--textColor);
 }
 
 .container-tech{
@@ -505,7 +517,7 @@ main{
     height: 600px;
     max-width: 600px;
 
-    background-color: ghostwhite;
+    background-color: var(--secondBackgroundColorBody);
 
     border-radius: 20px;
     animation: container-certificado-load 360ms ease-in;
@@ -528,7 +540,7 @@ main{
    
 }
 .container-certificados i{
-    color: rgba(0, 0, 0, 0.475);
+    color: var(--textHeaderColor);
     transition: 200ms;
 }
 
@@ -629,8 +641,8 @@ main{
 
     border-radius: 30px 0px 30px 0px;
 
-    border-top: 3px solid hsla(180, 93%, 11%, 0.9);
-    border-bottom: 3px solid hsla(180, 93%, 11%, 0.9);
+    border-top: 3px solid var(--textColor);
+    border-bottom: 3px solid var(--textColor);
 }
 
 .container-card-projeto .description{
@@ -646,7 +658,7 @@ main{
     border-radius: 10px 0px 10px 0px;
     padding: 0px 15px;
     color: hsla(240, 100%, 99%, 0.808);
-    background-color: hsla(180, 93%, 11%, 0.9);
+    background-color: var(--textColor);
     border: 1px transparent;
 }
 
@@ -654,7 +666,7 @@ main{
 
     padding: 5px 5px;
 
-    border: 1px solid hsla(180, 93%, 11%, 0.3);
+    border: 1px solid var(--textColor);
     border-radius: 5px;
 }
 
@@ -676,7 +688,7 @@ main{
 
 .container-card-projeto .card .demo i{
     font-size: 1.5em;
-    color:hsla(180, 93%, 11%, 0.9);
+    color: var(--textColor);
 }
 
 .container-card-projeto .card .demo a:hover, 
@@ -775,8 +787,8 @@ footer{
     font-size: 1em;
     text-align: center;
 
-    color:hsla(240, 100%, 99%, 0.4);
-    background-color: hsla(180, 93%, 11%, 0.9);
+    color:var(--textHeaderColor);
+    background-color: var(--headerBackgroundColor);
     
     width: 100%;
 

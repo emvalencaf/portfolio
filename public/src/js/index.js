@@ -39,7 +39,7 @@ if(document.body.getAttribute("data-noJavascript")){
 
 const mobileMenuBtn = document.querySelector('#mobile-menu')
 const ulNavbar = document.querySelector('.navbar_ul')
-
+const btnToggleTheme = document.querySelector("#btnToggleTheme")
     //main > section.home
 const saudacao = document.querySelector("#saudacao")
 
@@ -114,6 +114,71 @@ function hideNavbar(){
 
     return lastScrollYCoords = window.scrollY
 }
+    //botão de toggle Theme para dark mode ou light mode
+
+btnToggleTheme.addEventListener('click', toggleTheme)
+
+function toggleTheme(evt){
+    
+
+    const root = document.querySelector(':root')
+
+    const i = btnToggleTheme.firstElementChild
+
+    console.log(root)
+
+    if(btnToggleTheme.getAttribute("data-theme") === "lightMode"){
+        
+        i.classList.remove('uil-moon')
+        i.classList.add('uil-sun')
+        btnToggleTheme.setAttribute('data-theme', "darkMode")
+
+        //btnToggleTheme.replaceChild(i, btnToggleTheme.firstElementChild)
+        
+        root.style.setProperty('--textColor', 'hsla(240, 100%, 99%, 0.4)')
+        root.style.setProperty('--backgroundColorBody', 'hsl(180, 63%, 10%)')
+        root.style.setProperty('--headerBackgroundColor', 'hsla(180, 87%, 3%, 0.562)')
+        root.style.setProperty('--secondBackgroundColorBody', 'hsla(180, 87%, 3%, 1)')
+        root.style.setProperty('--textHeaderColor', 'hsla(240, 100%, 99%, 0.4)')
+        root.style.setProperty('--textHomeColor', 'hsl(138, 6%, 57%)')
+        root.style.setProperty('--titleHomeColor', 'hsla(180, 17%, 60%, 0.9)')/**/
+
+    } else {
+        
+        i.classList.remove('uil-sun')
+        i.classList.add('uil-moon')
+
+        btnToggleTheme.setAttribute('data-theme', "lightMode")
+
+        root.style.setProperty('--textColor', 'hsla(180, 93%, 11%, 0.9)')
+        root.style.setProperty('--backgroundColorBody', 'white')
+        root.style.setProperty('--headerBackgroundColor', 'hsla(180, 93%, 11%, 0.9)')
+        root.style.setProperty('--secondBackgroundColorBody', 'ghostwhite')
+        root.style.setProperty('--textHeaderColor', 'hsla(240, 100%, 99%, 0.4)')
+        root.style.setProperty('--textHomeColor', 'hsl(139, 11%, 34%)')
+        root.style.setProperty('--titleHomeColor', 'hsla(180, 93%, 11%, 0.9)')/**/
+
+    }
+
+
+
+/*
+    --textColor: hsla(180, 93%, 11%, 0.9);
+    --backgroundColorBody: white;
+    --headerBackgroundColor: var(--textColor);
+    --textHeaderColor: hsla(240, 100%, 99%, 0.4);
+    
+    --textHomeColor: hsl(139, 11%, 34%);
+    --titleHomeColor: var(--textColor);
+    --titleProfissao: hsl(141, 43%, 56%);
+
+
+*/
+
+
+
+}
+
 
     //Botão de toggle para o menu mobile
 
