@@ -6,7 +6,8 @@ export class ProjetoView{
         this.card = card
     }
 
-    renderRepository(data){
+    renderRepository(data, length){
+        document.querySelector("#pRepo").innerHTML = `Atualmente tenho ${length} projetos em repositórios públicos no meu github, sinta-se a vontade para visita-los e me dá um feedback.`
 
         const html =`
             <h2 class="title-projeto">${data.name}</h2>

@@ -12,7 +12,7 @@ export class ProjetoController{
             const data = await this.service.getLanguage(this.service.projeto_indice)
 
             console.log(data)
-            this.view.renderRepository(data)
+            this.view.renderRepository(data, this.service.projetos.length)
 
         }catch(e){
 

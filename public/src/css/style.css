@@ -89,6 +89,7 @@ header button{
 
 .logo:hover span{
     background-image: linear-gradient(to right, hsla(240, 100%, 99%, 0.6), rgb(114, 160, 95));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -98,7 +99,7 @@ header button{
     text-shadow: 0px 0px 8px rgb(114, 160, 95);
 }
 
-/* annimação do logo*/
+/* animação do logo*/
 
 @keyframes logo-anime{
     0%{
@@ -287,6 +288,11 @@ main{
 /*    height: 500px;*/
     padding-top: 80px;
     margin-bottom: 20px;
+}
+
+.section a{
+    text-decoration: none;
+    color: inherit;
 }
 
 .section .title:after{
@@ -660,6 +666,12 @@ main{
     color: hsla(240, 100%, 99%, 0.808);
     background-color: var(--textColor);
     border: 1px transparent;
+}
+
+.container-card-projeto .card .topicos{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
 }
 
 .container-card-projeto .card .topicos span{

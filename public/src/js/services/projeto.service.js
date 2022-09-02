@@ -26,8 +26,7 @@ export class ProjetoService{
 
     async getLanguage(indice){
 
-        this.projetos[indice].languages = await createFetch(this.projetos[indice].languages_url).then(languages => languages)
-
+        if(Object.keys(this.projetos[indice].languages).length === 0) this.projetos[indice].languages = await createFetch(this.projetos[indice].languages_url).then(languages => this.projetos[indice].languages = languages)
 
         return this.projetos[indice]
 
@@ -39,13 +38,13 @@ export class ProjetoService{
 
             if(this.projeto_indice >= this.projetos.length) return this.projeto_indice = 0
     
-            return ++this.projeto_indice
+            return this.projeto_indice++
 
         }
 
-        if(this.projeto_indice <= 0) return this.projeto_indice = this.projetos.length
+        if(this.projeto_indice <= 0) return this.projeto_indice = this.projetos.length - 1
 
-        return --this.projeto_indice
+        return this.projeto_indice--
     }    
 
 }

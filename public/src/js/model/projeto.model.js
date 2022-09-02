@@ -6,6 +6,7 @@ export class ProjetoModel{
         this.topics = topics
         this.homepage = homepage
         this.languages_url = languages_url
+        this.languages = {}
     }
 
 }

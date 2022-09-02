@@ -1,4 +1,5 @@
 @media (max-width:770px){
+
 /*navbar mobile*/
     header{
         position: fixed;
@@ -33,6 +34,7 @@
 
     .logo:hover sup{
         background-image: linear-gradient(to right, hsla(240, 100%, 99%, 0.6), rgb(114, 160, 95));
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -109,7 +111,6 @@
     }
 
     .section .title:after{
-        background-color: black;
         content: "";
         height: 1px;
         width: 150px;
@@ -215,6 +216,10 @@
         border-radius: 30px 0px 30px 0px;
     }
 
+    .container-card-projeto .title-projeto{
+        font-size: 1.25em;
+    }
+
 
     .container-card-projeto .card .demo{
         margin-right: 20px;
@@ -223,8 +228,6 @@
     .container-card-projeto .card:hover{
         background-color: inherit;
     }
-
-
     
 
     footer{
