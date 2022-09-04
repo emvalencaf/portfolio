@@ -118,6 +118,7 @@ function hideNavbar(){
     //botão de toggle Theme para dark mode ou light mode
 
 btnToggleTheme.addEventListener('click', toggleTheme)
+btnToggleTheme.addEventListener('drag', toggleTheme)
 
 function toggleTheme(evt){
     
@@ -184,6 +185,7 @@ function toggleTheme(evt){
     //Botão de toggle para o menu mobile
 
 mobileMenuBtn.addEventListener('click', toggleMobileMennu)
+mobileMenuBtn.addEventListener('drag', toggleMobileMennu)
 
 function toggleMobileMennu(evt){
     const htmlOpenMenu = '<i class="uil uil-bars"></i>'
@@ -205,6 +207,8 @@ function toggleMobileMennu(evt){
     //Botões da seção de hab
 
 btnsHab.forEach(btn => btn.addEventListener("click", showTechDescription))
+btnsHab.forEach(btn => btn.addEventListener("drag", showTechDescription))
+
 
 function showTechDescription(evt){
 
@@ -215,6 +219,7 @@ function showTechDescription(evt){
 
 btnCertf.addEventListener("click", showTechCertf)
 
+btnCertf.addEventListener("drag", showTechCertf)
 
 
 function showTechCertf(evt){
@@ -228,6 +233,8 @@ function showTechCertf(evt){
 }
 
 btnCloseCertf.addEventListener("click", closeTechCertf)
+
+btnCloseCertf.addEventListener("drag", closeTechCertf)
 
 function closeTechCertf(){
 
@@ -243,7 +250,12 @@ function closeTechCertf(){
 
 btnPreviousRepo.addEventListener("click", navigateRepos)
 
+btnPreviousRepo.addEventListener("drag", navigateRepos)
+
 btnNextRepo.addEventListener("click", navigateRepos)
+
+btnNextRepo.addEventListener("drag", navigateRepos)
+
 
 function navigateRepos(evt){
 
