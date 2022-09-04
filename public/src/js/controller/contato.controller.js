@@ -9,20 +9,41 @@ export class ContatoController{
         
         fields.forEach(field => {
 
-            let minlength = 0
+            let minlength = 3
 
             if(field.getAttribute("data-contato-type") !== "mensagem"){
 
                 minlength = parseInt(field.getAttribute("minlength")) < 3? 3: parseInt(field.getAttribute("minlength"))
 
+            } else {
+
+                minlength = parseInt(field.getAttribute("minlength")) < 50? 50: parseInt(field.getAttribute("minlength"))
+
             }
 
-            minlength = parseInt(field.getAttribute("minlength")) < 50? 50: parseInt(field.getAttribute("minlength"))
 
 
             this.validation(field.value, field.getAttribute("data-contato-type"), minlength)
+
         })
 
+        if(fields.every(field => field.classList.contains("error"))) return console.log("Há algum erro no(s) campo(s) do formulário")
+
+        const formData = {
+
+            name: dataDOM.querySelector('[data-contato-type="nome"]').value,
+
+            email: dataDOM.querySelector('[data-contato-type="email"]').value,
+
+            subject: dataDOM.querySelector('[data-contato-type="assunto"]').value,
+
+            message: dataDOM.querySelector('[data-contato-type="mensagem"]').value
+
+        }
+
+        console.log(formData)
+
+        this.service.sendEmail(formData, () => this.view.renderSucess(), () => this.view.renderFailure())
     }
 
     validation(domObject, typeDomObject, minlength){

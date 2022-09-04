@@ -1,4 +1,5 @@
 @media (max-width:770px){
+
 /*navbar mobile*/
     header{
         position: fixed;
@@ -13,12 +14,34 @@
     header .logo{
         display: inherit;
         align-self: center;
-        margin-left: 20px;
+        margin-left: 0px;
     }
 
     .logo.mobile-menu-active{
         display: none;
     }
+
+
+    
+    .logo i{
+        font-size: 1.2em;
+        color: hsla(240, 100%, 99%, 0.6);
+    }
+
+
+    .logo:hover sup{
+        background-image: linear-gradient(to right, hsla(240, 100%, 99%, 0.6), rgb(114, 160, 95));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .logo:hover i{
+        color: hsla(240, 100%, 99%, 1);
+        text-shadow: 0px 0px 8px rgb(114, 160, 95);
+    }
+
+
 
     .toggleThemeMode{
         align-self: center;
@@ -46,7 +69,9 @@
     .navbar_ul.mobile-menu-active{
         display:grid;
     }
+
     /*animação do grid navbar_link*/
+
     .navbar_link:first-child{
         animation-name: navbarLinkLoad;
         transform: scale(0);
@@ -63,6 +88,7 @@
     }
 
     /* seção base no mobile*/
+
     .section{
         margin-bottom: 100px;
         margin-left: 0px;
@@ -72,16 +98,23 @@
         padding-left: 20px;
         padding-right: 20px;
     }
+
     .section .title{
         width: 100%;
     }
+
+    .section .text{
+        text-align: justify;
+    }
+
     .section .title:after{
-        background-color: black;
         content: "";
         height: 1px;
         width: 150px;
     }
+
     /*seção home no mobile*/
+
     .section.home{
         margin-top: 100px;
         padding-top: 100px;
@@ -101,6 +134,7 @@
         font-size: 1em;
         text-transform: uppercase;
     }
+
     /*seção sobre no mobile*/
 
     .section.sobre .container{
@@ -113,13 +147,15 @@
     .section.sobre .text{
         width: 250px;
         max-width: 300px;
+        text-align: justify;
     }
+
     /*seção habilidades no mobile*/
     
     .container-descricao p{
         text-align: justify;
     }
-
+    
     .section.hab .container-tech{
         display: flex;
         flex-direction: row;
@@ -132,12 +168,12 @@
         justify-content: center;
         align-items: center;
         font-size: 0.8em;
-        padding: 40px 5px 5px 80px;
+        padding: 8px 8px 0px 40px;
 
     }
 
     /* seção projetos*/
-
+/*
     .section.projetos{
         padding-left: 2px;
         padding-right: 2px;
@@ -145,6 +181,10 @@
 
     .section.projetos .title{
         padding-left: 20px;
+    }*/
+
+    .section.projetos article .text{
+        text-align: justify;
     }
 
     .container-card-projeto .arrow{
@@ -156,15 +196,14 @@
     
     
     .container-card-projeto .card{
+        font-size: 0.8em;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
 
         width: 100%;
-        max-width: 500px;
-
-        margin-top: 50px;
+        max-width: 335px;
 
         text-align: justify;
     
@@ -174,11 +213,18 @@
         border-radius: 30px 0px 30px 0px;
     }
 
-    .container-card-projeto .card:hover{
-        background-color: inherit;
+    .container-card-projeto .title-projeto{
+        font-size: 1.25em;
     }
 
 
+    .container-card-projeto .card .demo{
+        margin-right: 20px;
+    }
+
+    .container-card-projeto .card:hover{
+        background-color: inherit;
+    }
     
 
     footer{
@@ -187,9 +233,6 @@
     
         font-size: 0.8em;
         text-align: center;
-
-        color:hsla(240, 100%, 99%, 0.4);
-        background-color: hsla(180, 93%, 11%, 0.9);
     
         width: 100%;
 

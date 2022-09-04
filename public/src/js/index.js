@@ -39,6 +39,9 @@ if(document.body.getAttribute("data-noJavascript")){
 
 const mobileMenuBtn = document.querySelector('#mobile-menu')
 const ulNavbar = document.querySelector('.navbar_ul')
+const btnToggleTheme = document.querySelector("#btnToggleTheme")
+    //main > section.home
+const saudacao = document.querySelector("#saudacao")
 
     //main > section.hab
 
@@ -81,7 +84,21 @@ const contatoController = new ContatoController(contatoView, contatoService)
     //carregar os repositórios na memória
 projetoController.getRepositories()
 
+    //carregar mensagem de saudação
 
+function greetingMessage(){
+    let h = new Date().getHours()
+
+    if(h <= 5) return saudacao.textContent = 'boa madrugada'
+
+    if(h < 12) return saudacao.textContent = 'bom dia'
+
+    if(h < 18) return saudacao.textContent = 'boa tarde'
+
+    return saudacao.textContent = 'boa noite'
+}
+
+greetingMessage()
 
 //Listerner nos eventos DOM
 
@@ -98,12 +115,93 @@ function hideNavbar(){
 
     return lastScrollYCoords = window.scrollY
 }
+    //botão de toggle Theme para dark mode ou light mode
+
+btnToggleTheme.addEventListener('click', toggleTheme)
+btnToggleTheme.addEventListener('drag', toggleTheme)
+
+function toggleTheme(evt){
+    
+
+    const root = document.querySelector(':root')
+
+    const i = btnToggleTheme.firstElementChild
+
+    console.log(root)
+
+    if(btnToggleTheme.getAttribute("data-theme") === "lightMode"){
+        
+        i.classList.remove('uil-moon')
+        i.classList.add('uil-sun')
+        btnToggleTheme.setAttribute('data-theme', "darkMode")
+
+        //btnToggleTheme.replaceChild(i, btnToggleTheme.firstElementChild)
+        
+        root.style.setProperty('--textColor', 'hsla(240, 100%, 99%, 0.4)')
+        root.style.setProperty('--backgroundColorBody', 'hsl(180, 63%, 10%)')
+        root.style.setProperty('--headerBackgroundColor', 'hsla(180, 87%, 3%, 0.562)')
+        root.style.setProperty('--secondBackgroundColorBody', 'hsla(180, 87%, 3%, 1)')
+        root.style.setProperty('--textHeaderColor', 'hsla(240, 100%, 99%, 0.4)')
+        root.style.setProperty('--textHomeColor', 'hsl(138, 6%, 57%)')
+        root.style.setProperty('--titleHomeColor', 'hsla(180, 17%, 60%, 0.9)')/**/
+
+    } else {
+        
+        i.classList.remove('uil-sun')
+        i.classList.add('uil-moon')
+
+        btnToggleTheme.setAttribute('data-theme', "lightMode")
+
+        root.style.setProperty('--textColor', 'hsla(180, 93%, 11%, 0.9)')
+        root.style.setProperty('--backgroundColorBody', 'white')
+        root.style.setProperty('--headerBackgroundColor', 'hsla(180, 93%, 11%, 0.9)')
+        root.style.setProperty('--secondBackgroundColorBody', 'ghostwhite')
+        root.style.setProperty('--textHeaderColor', 'hsla(240, 100%, 99%, 0.4)')
+        root.style.setProperty('--textHomeColor', 'hsl(139, 11%, 34%)')
+        root.style.setProperty('--titleHomeColor', 'hsla(180, 93%, 11%, 0.9)')/**/
+
+    }
+
+
+
+/*
+    --textColor: hsla(180, 93%, 11%, 0.9);
+    --backgroundColorBody: white;
+    --headerBackgroundColor: var(--textColor);
+    --textHeaderColor: hsla(240, 100%, 99%, 0.4);
+    
+    --textHomeColor: hsl(139, 11%, 34%);
+    --titleHomeColor: var(--textColor);
+    --titleProfissao: hsl(141, 43%, 56%);
+
+
+*/
+
+
+
+}
+
+function addEventListenerAll(element, events, cb){
+ 
+    
+    events.split(' ').forEach( event => {
+
+        element.addEventListener(event, cb)
+    })
+
+}
+
+
 
     //Botão de toggle para o menu mobile
 
-mobileMenuBtn.addEventListener('click', toggleMobileMennu)
+addEventListenerAll(mobileMenuBtn, 'click drag touch dblclick', toggleMobileMenu)
+//mobileMenuBtn.addEventListener('click', toggleMobileMenu)
+//mobileMenuBtn.addEventListener('drag', toggleMobileMenu)
+//mobileMenuBtn.addEventListener('touch', toggleMobileMenu)
+//mobileMenuBtn.addEventListener('dblclick', toggleMobileMenu)
 
-function toggleMobileMennu(evt){
+function toggleMobileMenu(evt){
     const htmlOpenMenu = '<i class="uil uil-bars"></i>'
     const htmlCloseMenu = '<i class="uil uil-times"></i>'
     const btn = evt.currentTarget
@@ -122,7 +220,11 @@ function toggleMobileMennu(evt){
 
     //Botões da seção de hab
 
-btnsHab.forEach(btn => btn.addEventListener("click", showTechDescription))
+btnsHab.forEach(btn => addEventListenerAll(btn, 'click drag touch dblclick', showTechDescription))
+
+//btnsHab.forEach(btn => btn.addEventListener("click", showTechDescription))
+//btnsHab.forEach(btn => btn.addEventListener("drag", showTechDescription))
+
 
 function showTechDescription(evt){
 
@@ -131,8 +233,10 @@ function showTechDescription(evt){
 
 }
 
-btnCertf.addEventListener("click", showTechCertf)
+addEventListenerAll(btnCertf, 'click drag touch dblclick', showTechCertf)
 
+//btnCertf.addEventListener("click", showTechCertf)
+//btnCertf.addEventListener("drag", showTechCertf)
 
 
 function showTechCertf(evt){
@@ -145,7 +249,10 @@ function showTechCertf(evt){
     habilidadeController.getTechCertificados(evt.currentTarget.getAttribute("data-hab"))
 }
 
-btnCloseCertf.addEventListener("click", closeTechCertf)
+addEventListenerAll(btnCloseCertf, 'click drag touch dblclick', closeTechCertf)
+
+//btnCloseCertf.addEventListener("click", closeTechCertf)
+//btnCloseCertf.addEventListener("drag", closeTechCertf)
 
 function closeTechCertf(){
 
@@ -159,9 +266,15 @@ function closeTechCertf(){
 
     //Botões Next e Previous para navegar pelos repositórios
 
-btnPreviousRepo.addEventListener("click", navigateRepos)
+addEventListenerAll(btnPreviousRepo, 'click drag touch dblclick', navigateRepos)
+//btnPreviousRepo.addEventListener("click", navigateRepos)
+//btnPreviousRepo.addEventListener("drag", navigateRepos)
 
-btnNextRepo.addEventListener("click", navigateRepos)
+addEventListenerAll(btnNextRepo, 'click drag touch dblclick', navigateRepos)
+
+//btnNextRepo.addEventListener("click", navigateRepos)
+//btnNextRepo.addEventListener("drag", navigateRepos)
+
 
 function navigateRepos(evt){
 

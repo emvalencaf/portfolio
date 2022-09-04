@@ -1,23 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
 
-
 :root{
 
     /*variáveis de animação*/
     --header_load_time: 560ms;
     --navbarLink_load_time: 450ms;
+    --logo_load_time: calc(var(--header_load_time) + var(--navbarLink_load_time));
+    
+    /*variável de cor*/
+
+    --textColor: hsla(180, 93%, 11%, 0.9);
+    --backgroundColorBody: white;
+    --headerBackgroundColor: var(--textColor);
+    --textHeaderColor: hsla(240, 100%, 99%, 0.4);
+    
+    --textHomeColor: hsl(139, 11%, 34%);
+    --titleHomeColor: var(--textColor);
+    --titleProfissao: hsl(141, 43%, 56%);
+
 }
 
 body{
     font-family: 'Roboto', sans-serif;
 
-    color: hsla(180, 93%, 11%, 0.9);
+    color: hsla(240, 100%, 99%, 0.4);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
 
-    background-color: white;
+    background-color: hsl(180, 63%, 10%);
 }
 
 /* -- header ---*/
@@ -32,7 +44,7 @@ header{
     justify-content: space-around;
     
     color:hsla(240, 100%, 99%, 0.4);
-    background-color: hsla(180, 93%, 11%, 0.9);
+    background-color: hsla(180, 87%, 3%, 0.562);
     
     width: 100%;
 
@@ -61,6 +73,44 @@ header button{
 .logo{
     text-transform: uppercase;
     align-self: center;
+    transform: scale(0);
+    animation: logo-anime 460ms ease-in var(--logo_load_time);
+    animation-fill-mode: forwards;
+}
+
+
+.logo i{
+    font-size: 2em;
+    color: hsla(240, 100%, 99%, 0.6);
+}
+
+.logo span{
+    vertical-align: super;
+}
+
+.logo:hover span{
+    background-image: linear-gradient(to right, hsla(240, 100%, 99%, 0.6), rgb(114, 160, 95));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo:hover i{
+    color: hsla(240, 100%, 99%, 1);
+    text-shadow: 0px 0px 8px rgb(114, 160, 95);
+}
+
+/* annimação do logo*/
+
+@keyframes logo-anime{
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 
@@ -194,7 +244,7 @@ main{
 }
 
 .container.social-media i{
-    color: hsla(180, 93%, 11%, 0.9);
+    color: hsla(240, 100%, 99%, 0.6);
     transition: 400ms;
 }
 
@@ -203,12 +253,12 @@ main{
 }
 
 .container.social-media ul:after{
-    background-color:hsla(180, 93%, 11%, 0.9);
+    background-color:hsla(240, 100%, 99%, 0.6);
 
     content: "";
     width: 1px;
     height: 100px;
-    border: 1px solid hsla(180, 93%, 11%, 0.9);
+    border: 1px solid hsla(240, 100%, 99%, 0.6);
     margin: 20px auto;
     display:inline-block;
     
@@ -235,30 +285,37 @@ main{
 
 .section{
     margin: 0px 220px;
-    height: 500px;
+/*    height: 500px;*/
     padding-top: 80px;
+    margin-bottom: 20px;
 }
 
 .section .title:after{
-    background-color:hsla(180, 93%, 11%, 0.9);
+    background-color:hsla(240, 100%, 99%, 0.6);
     content: "";
     height: 1px;
     width: 250px;
-    border: 1px hsla(180, 93%, 11%, 0.9);
+    border: 1px hsla(240, 100%, 99%, 0.6);
     margin: auto 20px;
     transform: translateY(-6px);
     display: inline-block;
 }
 
+.section article{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 /* seção home*/
 
 .section.home{
-    color:hsl(139, 11%, 34%);
+    color:hsl(138, 6%, 57%);
     margin-top: 200px;
 }
 
 .section.home .title{
-    color: hsla(180, 93%, 11%, 0.9);
+    color: hsla(180, 17%, 60%, 0.9);
     font-size: 2em;
 }
 
@@ -294,6 +351,8 @@ main{
 
 .section.sobre .container{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap:50px;
 }
 
@@ -312,9 +371,16 @@ main{
     max-width: 550px;
 }
 
-.section.sobre img{
+
+.section.sobre picture img{
+
     width: 250px;
     height: 250px;
+
+    border-radius: 20px;
+
+
+    box-shadow: 20px 14px 30px 4px hsla(240, 100%, 99%, 0.1);
 }
 
 .section.sobre .btn{
@@ -325,7 +391,7 @@ main{
     text-transform: uppercase;
 
 
-    margin: 10px;
+    margin: 30px 0px;
     padding: 5px;
     width: 100%;
 
@@ -336,6 +402,11 @@ main{
     cursor: pointer;
     
     background-color:hsla(180, 93%, 11%, 0.9);
+}
+
+.section.sobre .btn:hover{
+    
+    color:hsla(240, 100%, 99%, 1);
 }
 
 /* seção de habilidades*/
@@ -352,6 +423,7 @@ main{
 }
 .section.hab i{
     font-size: 3em;
+    color: hsla(240, 100%, 99%, 0.6);
 }
 
 .container-tech{
@@ -449,7 +521,7 @@ main{
     background-color: ghostwhite;
 
     border-radius: 20px;
-    animation: container-certificado-load 560ms ease-in;
+    animation: container-certificado-load 360ms ease-in;
     transform: scale(0);
     animation-fill-mode: forwards;
 }
@@ -566,17 +638,12 @@ main{
 
     text-align: justify;
     
-    background-color: hsla(180, 93%, 11%, 0.20);
     padding: 15px;
 
     border-radius: 30px 0px 30px 0px;
 
-    border-top: 3px solid hsla(180, 93%, 11%, 0.9);
-    border-bottom: 3px solid hsla(180, 93%, 11%, 0.9);
-}
-
-.container-card-projeto .card:hover{
-    background-color: hsla(180, 93%, 11%, 0.10);
+    border-top: 3px solid hsla(240, 100%, 99%, 0.6);
+    border-bottom: 3px solid hsla(240, 100%, 99%, 0.6);
 }
 
 .container-card-projeto .description{
@@ -592,7 +659,7 @@ main{
     border-radius: 10px 0px 10px 0px;
     padding: 0px 15px;
     color: hsla(240, 100%, 99%, 0.808);
-    background-color: hsla(180, 93%, 11%, 0.9);
+    background-color: hsla(240, 100%, 99%, 0.6);
     border: 1px transparent;
 }
 
@@ -622,7 +689,7 @@ main{
 
 .container-card-projeto .card .demo i{
     font-size: 1.5em;
-    color:hsla(180, 93%, 11%, 0.9);
+    color:hsla(240, 100%, 99%, 0.6);
 }
 
 .container-card-projeto .card .demo a:hover, 
@@ -658,6 +725,8 @@ main{
 
     width: 100%;
     max-width: 600px;
+
+    margin-top: 20px;
 }
 
 .section.contato .form label i{
@@ -668,10 +737,16 @@ main{
     padding: 5px;
 
     border-radius: 5px;
-    border: 2px solid hsla(180, 93%, 11%, 0.9);
+    border: 2px solid hsla(180, 40%, 80%, 0.9);
     outline: none;
 
     width: 100%;
+
+    background-color: hsla(240, 100%, 99%, 0.6);
+}
+
+.section.contato .form .input::placeholder{
+    color:hsl(180, 63%, 10%)
 }
 
 .section.contato .form .input:focus{
@@ -680,7 +755,19 @@ main{
 }
 
 
+textarea.input{
+    margin-top: 20px;
+    resize: none;
+    height: 250px;
+}
+
 .section.contato .form .btn{
+    color: hsla(240, 100%, 99%, 0.808);
+
+    font-weight: bold;
+    
+    margin: 20px 0px;
+
     padding: 5px;
 
     border-radius: 5px;
@@ -689,8 +776,14 @@ main{
     outline: none;
 
     cursor: pointer;
+
+    background-color:hsla(180, 93%, 11%, 0.9);
+    transition: 360ms ease-in;
 }
 
+.section.contato .form .btn:hover{
+    color:  hsla(240, 100%, 99%, 1);
+}
 
 /*footer */
 
@@ -702,7 +795,7 @@ footer{
     text-align: center;
 
     color:hsla(240, 100%, 99%, 0.4);
-    background-color: hsla(180, 93%, 11%, 0.9);
+    background-color: hsla(180, 87%, 3%, 0.562);
     
     width: 100%;
 

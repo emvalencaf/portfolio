@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu portfólio</title>
     <link rel="stylesheet" href="src/css/reset.css">
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/style.css"><!--
+    <link rel="stylesheet" href="src/css/darktheme.css">-->
     <link rel="stylesheet" href="src/css/responsive.css">
     <link rel="stylesheet" href="src/css/nojavascript.css">
     <link rel="stylesheet" href="src/css/error.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 </head>
 <body data-nojavascript="true">
     <header>
         <span class="logo" id="logo">
-              emvalenca
+              <i class="uil uil-angle-double-left"></i><span>emvalença</span><i class="uil uil-angle-double-right"></i>
         </span>
-        <button class="toggleThemeMode nojavascript">
+        <button class="toggleThemeMode nojavascript" id="btnToggleTheme" data-theme="lightMode">
             <i class="uil uil-moon"></i>
         </button>
         <nav class="navbar-container">
@@ -68,7 +70,7 @@
                     </a>
                 </li>
                 <li class="navbar_link">
-                    <a href="#">
+                    <a href="./src/assets/emvalenca_curriculo.pdf" download>
                         <i class="uil uil-file-download-alt"></i>
                         <span>
                             <strong>currículo</strong>
@@ -90,7 +92,7 @@
                 </li>
                 <li class="social_media_link">
                     <abbr title="meu linkedin">
-                        <a href="#" target="_blank" ref="external">
+                        <a href="https://www.linkedin.com/in/emvalencaf/" target="_blank" ref="external">
                             <i class="uil uil-linkedin-alt"></i>
                         </a>
                     </abbr>
@@ -123,26 +125,32 @@
                     <div class="container">
                         <div class="container col">
                             <p class="text">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus atque debitis rerum aliquid numquam ab cumque corporis odit cupiditate, voluptatem quam repellat obcaecati, molestias amet id ut impedit! Laudantium, ducimus!
+                                Sou graduado em Direito e atuei como advogado por alguns anos. Atualmente, estou em transição de carreira para a área da programação como desenvolvedor front-end na busca do meu primeiro emprego na área.
                             </p>
                             <p class="text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. At dolorum sunt distinctio quasi in id culpa optio, nisi odio eum commodi nemo consequuntur fuga similique impedit ratione ipsam nam eveniet!
+                                Meu objetivo para o médio prazo é me tornar um desenvolvedor fullstack.
                             </p>
                             <p class="text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, temporibus optio maxime fugiat dolores vero architecto dolorem exercitationem ipsam voluptate adipisci eos quasi possimus, laborum, id voluptatem asperiores sint totam.
+                                Minha decisão pela transição de carreira surgiu gradualmente com minha aproximação a área de programação que começou a aprofundar-se (de forma madura) na época da faculdade – em razão do interesse acadêmico no impacto das lawtech no Direito e mais recentemente temas relacionados a startups.
+                            </p>
+                            <p class="text">
+                                Falo de forma madura, pois, durante a adolescência, como um passatempo, estive envolvido com projetos de desenvolvimentos de jogos na plataforma BYOND e RPG Maker.
+                            </p>
+                            <p class="text">
+                                Atualmente estudo programação de forma autodidata por cursos EAD e desenvolvo aplicações e páginas web com javascript, CSS, HTML e NodeJS. Convido você a ficar sabendo um pouco mais sobre mim, me acompanhe no meu <strong><a href="https://github.com/emvalencaf" rel="external" target="_blank">github<sup><i class="uil uil-external-link-alt"></i></sup></a></strong> e <strong><a href="https://www.linkedin.com/in/emvalencaf/" rel="external" target="_blank">linkedIn<sup><i class="uil uil-external-link-alt"></i></sup></a></strong>.
                             </p>
                         </div>
-                        <div>
-                            <img src="#" alt="minha foto">
-                        </div>
+                        <picture>
+                            <img src="./src/assets/profile_photo.jpg" alt="minha foto">
+                        </picture>
                     </div>
-                    <button class="btn">Baixar currículo</button>
+                    <a href="./src/assets/emvalenca_curriculo.pdf" download><button class="btn">Baixar currículo</button></a>
                 </article>
             </section>
             <section id="habilidades" class="section hab">
                 <article>
                     <h1 class="title">Habilidades</h1>
-                    <p>
+                    <p class="text">
                         Abaixo as tecnologias que eu uso para desenvolver o front-end e, algumas vezes, o back-end de webpages e webapp,<span class="nojavascript"> clique nos ícones abaixo para saber um pouco mais:</span><span class="nojavascript substituto-span"> são elas: javascript, html, css, visual studio code (como editor de código), nodejs (para o back-end), git e o photoshop.</span>
                     </p>
                     <div class="container-tech" id="containerTech">
@@ -168,7 +176,8 @@
                         </abbr>
                         <abbr title="nodejs">
                             <button class="btn" id="btnNodejs" data-hab="nodejs">
-                                <img src="#" alt="logo do nodejs">
+                                <i class="fa-brands fa-node"></i>
+                                <!--<img src="./src/assets/Node.js_logo.svg" alt="logo do nodejs">-->
                             </button>
                         </abbr>
                         <abbr title="git">
@@ -178,7 +187,8 @@
                         </abbr>
                         <abbr title="photoshop">
                             <button class="btn" id="btnPhotoshop" data-hab="photoshop">
-                                <img src="./src/imgs/adobe-photoshop.svg" alt="logo do photoshop" srcset="">
+                                <i class="uil uil-adobe-alt"></i>
+                                <!--<img src="./src/assets/adobe-photoshop.svg" alt="logo do photoshop">-->
                             </button>
                         </abbr>
                     </div>
@@ -218,8 +228,11 @@
             <section id="projetos" class="section projetos">
                 <article>
                     <h1 class="title">Projetos</h1>
-                    <p>
-                        Veja abaixo <span class="nojavascript substituto-span">um d</span>os meus projetos vinculados a minha conta no github ou, se preferir, pode conferir diretamente os meus repositórios no <a href="https://github.com/emvalencaf?tab=repositories" target="_blank" rel="external">github</a>.
+                    <p class="text">
+                        Veja abaixo <span class="nojavascript substituto-span">seis d</span>os meus projetos vinculados a minha conta no github ou, se preferir, pode conferir diretamente os meus repositórios no <a href="https://github.com/emvalencaf?tab=repositories" target="_blank" rel="external">github<sup><i class="uil uil-external-link-alt"></i></sup></a>.
+                    </p>
+                    <p class="text" id="pRepo">
+
                     </p>
                     <div class="container-card-projeto nojavascript">
                         <button class="arrow nojavascript" id="btnPreviousRepo" data-navigate-repo="previous">
@@ -263,34 +276,31 @@
             </section>
 
             <section id="contato" class="section contato">
-                <h1 class="title">Contato</h1>
-                <p>
-                    E, então, vamos desenvolver projetos úteis e incríveis juntos?
-                </p>
-                <p>
-                    Você pode entrar em contato por mim pelo meu e-mail edsonmvf@gmail.com, <a href="#" target="_blank" rel="external">perfil do linkedin</a> ou, ainda, se quiser, pelo formulário abaixo:
-                </p>
-                <div>
-                    <form class="form">
-
-                        <label for="name">Nome <abbr title="campo obrigatório"><sup><i class="uil uil-exclamation-circle"></i></sup></abbr></label>
-                        <input type="text" class="input" minlength="3" id="inputName" placeholder="preencha esse campo com o seu nome" data-contato-type="nome" required>
-                        <span class="error" id="error-nome">por favor preencha um nome</span>
-
-                        <label for="email">E-mail <abbr title="campo obrigatório"><sup><i class="uil uil-exclamation-circle"></i></sup></abbr></label>
-                        <input type="email" id="inputEmail" class="input" placeholder="preencha esse campo com o seu e-mail" data-contato-type="email" minlength="3" required>
-                        <span class="error" id="error-email">por favor preencha um e-mail</span>
-
-                        <label for="">Assunto <abbr title="campo obrigatório"><sup><i class="uil uil-exclamation-circle"></i></sup></abbr></label>
-                        <input type="text" class="input" id="inputAssunto" placeholder="preencha esse campo com o assunto" data-contato-type="assunto" minlength="3" required>
-                        <span class="error" id="error-assunto">por favor preencha um assunto</span>
-
-                        <textarea name="" id="textArea" cols="30" rows="10" maxlength="1500" minlength="50" class="input" placeholder="preencha aqui a sua mensagem, por favor limite-se a 15000 caracteres" data-contato-type="mensagem" required></textarea>
-                        <span class="error" id="error-mensagem">por favor, respeite o limite de caracteres</span>
-
-                        <button type="submit" class="btn">enviar</button>
-                    </form>
-                </div>
+                <article>
+                    <h1 class="title">Contato</h1>
+                    <p class="text">
+                        E, então, vamos desenvolver projetos úteis e incríveis juntos?
+                    </p>
+                    <p class="text">
+                        Você pode entrar em contato comigo pelo meu <strong><a href="https://www.linkedin.com/in/emvalencaf/" target="_blank" rel="external">perfil do linkedin<sup><i class="uil uil-external-link-alt"></i></sup></a></strong> ou, se preferir, pelo formulário abaixo:
+                    </p>
+                    <div>
+                        <form class="form">
+                            <label for="name">Nome <abbr title="campo obrigatório"><sup><i class="uil uil-exclamation-circle"></i></sup></abbr></label>
+                            <input type="text" class="input" minlength="3" id="inputName" placeholder="preencha esse campo com o seu nome" data-contato-type="nome" required>
+                            <span class="error" id="error-nome">por favor preencha um nome</span>
+                            <label for="email">E-mail <abbr title="campo obrigatório"><sup><i class="uil uil-exclamation-circle"></i></sup></abbr></label>
+                            <input type="email" id="inputEmail" class="input" placeholder="preencha esse campo com o seu e-mail" data-contato-type="email" minlength="3" required>
+                            <span class="error" id="error-email">por favor preencha um e-mail</span>
+                            <label for="">Assunto <abbr title="campo obrigatório"><sup><i class="uil uil-exclamation-circle"></i></sup></abbr></label>
+                            <input type="text" class="input" id="inputAssunto" placeholder="preencha esse campo com o assunto" data-contato-type="assunto" minlength="3" required>
+                            <span class="error" id="error-assunto">por favor preencha um assunto</span>
+                            <textarea name="" id="textArea" cols="30" rows="10" maxlength="1500" minlength="50" class="input" placeholder="preencha aqui a sua mensagem, por favor limite-se a 15000 caracteres" data-contato-type="mensagem" required></textarea>
+                            <span class="error" id="error-mensagem">por favor, respeite o limite de caracteres</span>
+                            <button type="submit" class="btn">enviar</button>
+                        </form>
+                    </div>
+                </article>
             </section>
         </div>
     </main>
@@ -302,36 +312,8 @@
             <a href="https://github.com/emvalencaf/portfolio" target="_blank" rel="external">Meu portfólio encontra-se na versão 1.0 clique neste parágrafo para ver o repositório deste projeto</a>
         </p>
     </footer>
-    <!--
-    <main>
-        <section id="sobre" class="section">
-            <h1 class="title">sobre mim</h2>
-            <article class="container">
-                <div class="container column">
-                    <p>
-                        para resumir: sou um graduado em Direito e nessa área trabalhei por alguns anos e, de forma gradual e natural, fui atraído para área no Direito que assiste a inovação e tecnologia no Direito. O que me levou me re-aproximou da área de progamação em razão das <em>law-tech</em>.
-                    </p>
-                    <p>
-                        para o mal ou bem, o tempo livre da pandemia me deu a oportunidade de aprofundar relações um passatempo antigo, do tempo de adolescência, que era desenvolver: programas; à época eram jogos na plataforma <a href="http://www.byond.com/" rel="external">BYOND</a> - uma plataforma com uma línguagem para criação de jogos multiplayers - hoje aplicações web.
-                    </p>
-                    <p>
-                        atualmente, sou um programador front-end júnior em busca do seu primeiro emprego na área de programação. No momento desenvolvo projetos legais em javascript, html e css, que vão desde aplicações a páginas na web que atendem a necessidade e desejos dos clientes que buscam do simples ao legal.
-                    </p>
-                    <p>
-                        saiba um pouco mais sobre as minhas qualificações acessando meu currículo e perfil no linkedin.
-                    </p>
-                    <div class="container">
-                        <button class="btn">currículo</button>
-                        <button>linkedIn</button>
-                    </div>
-                </div>
-                <picture>
-                    <img src="#" alt="minha foto">
-                </picture>
-            </article>
-        </section>-->
 
-
+<!---->
     <script src="./src/js/index.js" type="module"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-export async function createFetch(url){
+export async function createFetch(url, method = "GET", body = null){
 
     const handleError = (response) => {
 
@@ -7,7 +7,15 @@ export async function createFetch(url){
         return response
     }
 
-    return await fetch(url)
+    console.log(body)
+
+    return await fetch(url, {
+        method,
+        body,
+        headers:{
+            "content-type": "application/json;charset=UTF-8"
+        }
+    })
 
         .then(response => handleError(response))
 
