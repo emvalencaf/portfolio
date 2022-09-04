@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap');
 
 :root{
 
@@ -70,7 +71,8 @@ header button{
 }
 
 .logo{
-    text-transform: uppercase;
+    font-family: 'Ubuntu Mono';
+
     align-self: center;
     transform: scale(0);
     animation: logo-anime 460ms ease-in var(--logo_load_time);
@@ -84,7 +86,7 @@ header button{
 }
 
 .logo span{
-    vertical-align: super;
+    vertical-align: 9px;
 }
 
 .logo:hover span{
@@ -423,12 +425,23 @@ main{
     justify-content: center;
 
 }
+
 .section.hab .title{
     align-self: baseline;
 }
+
+.section.hab abbr{
+    text-decoration: none;
+}
+
+.section.hab abbr button{
+    text-decoration: none;
+}
+
 .section.hab i{
     font-size: 3em;
     color: var(--textColor);
+    text-decoration: none;
 }
 
 .container-tech{

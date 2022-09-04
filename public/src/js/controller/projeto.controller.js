@@ -30,7 +30,7 @@ export class ProjetoController{
         
         console.log(repository)
 
-        this.view.renderRepository(repository)
+        this.view.renderRepository(repository, this.service.projetos.length)
     }
 
 

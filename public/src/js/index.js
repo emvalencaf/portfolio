@@ -181,13 +181,27 @@ function toggleTheme(evt){
 
 }
 
+function addEventListenerAll(element, events, cb){
+ 
+    
+    events.split(' ').forEach( event => {
+
+        element.addEventListener(event, cb)
+    })
+
+}
+
+
 
     //Botão de toggle para o menu mobile
 
-mobileMenuBtn.addEventListener('click', toggleMobileMennu)
-mobileMenuBtn.addEventListener('drag', toggleMobileMennu)
+addEventListenerAll(mobileMenuBtn, 'click drag touch dblclick', toggleMobileMenu)
+//mobileMenuBtn.addEventListener('click', toggleMobileMenu)
+//mobileMenuBtn.addEventListener('drag', toggleMobileMenu)
+//mobileMenuBtn.addEventListener('touch', toggleMobileMenu)
+//mobileMenuBtn.addEventListener('dblclick', toggleMobileMenu)
 
-function toggleMobileMennu(evt){
+function toggleMobileMenu(evt){
     const htmlOpenMenu = '<i class="uil uil-bars"></i>'
     const htmlCloseMenu = '<i class="uil uil-times"></i>'
     const btn = evt.currentTarget
@@ -206,8 +220,10 @@ function toggleMobileMennu(evt){
 
     //Botões da seção de hab
 
-btnsHab.forEach(btn => btn.addEventListener("click", showTechDescription))
-btnsHab.forEach(btn => btn.addEventListener("drag", showTechDescription))
+btnsHab.forEach(btn => addEventListenerAll(btn, 'click drag touch dblclick', showTechDescription))
+
+//btnsHab.forEach(btn => btn.addEventListener("click", showTechDescription))
+//btnsHab.forEach(btn => btn.addEventListener("drag", showTechDescription))
 
 
 function showTechDescription(evt){
@@ -217,9 +233,10 @@ function showTechDescription(evt){
 
 }
 
-btnCertf.addEventListener("click", showTechCertf)
+addEventListenerAll(btnCertf, 'click drag touch dblclick', showTechCertf)
 
-btnCertf.addEventListener("drag", showTechCertf)
+//btnCertf.addEventListener("click", showTechCertf)
+//btnCertf.addEventListener("drag", showTechCertf)
 
 
 function showTechCertf(evt){
@@ -232,9 +249,10 @@ function showTechCertf(evt){
     habilidadeController.getTechCertificados(evt.currentTarget.getAttribute("data-hab"))
 }
 
-btnCloseCertf.addEventListener("click", closeTechCertf)
+addEventListenerAll(btnCloseCertf, 'click drag touch dblclick', closeTechCertf)
 
-btnCloseCertf.addEventListener("drag", closeTechCertf)
+//btnCloseCertf.addEventListener("click", closeTechCertf)
+//btnCloseCertf.addEventListener("drag", closeTechCertf)
 
 function closeTechCertf(){
 
@@ -248,13 +266,14 @@ function closeTechCertf(){
 
     //Botões Next e Previous para navegar pelos repositórios
 
-btnPreviousRepo.addEventListener("click", navigateRepos)
+addEventListenerAll(btnPreviousRepo, 'click drag touch dblclick', navigateRepos)
+//btnPreviousRepo.addEventListener("click", navigateRepos)
+//btnPreviousRepo.addEventListener("drag", navigateRepos)
 
-btnPreviousRepo.addEventListener("drag", navigateRepos)
+addEventListenerAll(btnNextRepo, 'click drag touch dblclick', navigateRepos)
 
-btnNextRepo.addEventListener("click", navigateRepos)
-
-btnNextRepo.addEventListener("drag", navigateRepos)
+//btnNextRepo.addEventListener("click", navigateRepos)
+//btnNextRepo.addEventListener("drag", navigateRepos)
 
 
 function navigateRepos(evt){

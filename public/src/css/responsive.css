@@ -28,9 +28,6 @@
         color: hsla(240, 100%, 99%, 0.6);
     }
 
-    .logo span{
-        transform: translateY(2px);
-    }
 
     .logo:hover sup{
         background-image: linear-gradient(to right, hsla(240, 100%, 99%, 0.6), rgb(114, 160, 95));
