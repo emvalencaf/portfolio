@@ -7,7 +7,6 @@ export async function createFetch(url, method = "GET", body = null){
         return response
     }
 
-    console.log(body)
 
     return await fetch(url, {
         method,

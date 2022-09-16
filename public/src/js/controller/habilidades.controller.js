@@ -6,14 +6,17 @@ export class HabilidadeController{
     }
 
     getTechDescription(btn){
+
         this.view.renderBtnActive(btn)
         const btnCertf = document.querySelector("#btnCertificados")
-        if(btn.getAttribute("data-hab") === "vscode" || btn.getAttribute("data-hab") === "photoshop") return btnCertf.disabled = true
-
-        btnCertf.disabled = false
+        
         const desc = this.service.getTechDescription(btn.getAttribute("data-hab"))
-
+        
         this.view.renderDesc(desc, btn.getAttribute("data-hab"))
+        
+        if(btn.getAttribute("data-hab") === "vscode" || btn.getAttribute("data-hab") === "photoshop") return btnCertf.disabled = true
+        
+        btnCertf.disabled = false
     }
 
     async getTechCertificados(tag){

@@ -31,9 +31,12 @@ export class HabilidadeView{
         
         if(data.length === 0) return
 
-        const containerCertificados = document.querySelector("#container-certificados")
-        const certificados = document.querySelector("#certificados")
-        containerCertificados.classList.add("active")
+        //const containerCertificados = document.querySelector("#container-certificados")
+        //const certificados = document.querySelector("#certificados")
+        //containerCertificados.classList.add("active")
+        const certificados = this.containerDesc.querySelector("#techDesc_text")
+        const btn = this.containerDesc.querySelector("#btnCertificados")
+        btn.disabled = true
 
         let html = "<ul>"
         html += data.map(curso => `
@@ -59,7 +62,6 @@ export class HabilidadeView{
     }
 
     renderError(){
-        console.log("olá")
     }
     
     treatString(string){
